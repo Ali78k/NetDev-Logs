@@ -19,10 +19,7 @@ Iptables relies on a set of `rules` organized into `chains` that determine the f
 **Table:** The traffic packets are filtered based on **tables** that are managed by `iptables`.  
 Most Linux distributions have four tables: `filter`, `mangle`, `nat`, and `raw`. The default is `filter`.  
 **Chain:** Each table contains a set of rulers (or chains) that define what to do with each packet depending on its point (*input*, *output*, *forward*). So each table contains a few chains, such as `PREROUTING`, `INPUT`, `OUTPUT`, `FORWARD`, and `POSTROUTING`. The filter table by default contains the `INPUT`, `FORWARD`, and `OUTPUT` chains.  
-
-
-**Rules:**  Each chain can contain rules to match specific packets based on type of traffic (e.g. tcp/udp/icmp), destination or source IP, port, etc. Each rule contains a target which determines what to do with packets that match the rule (e.g. accept or reject). 
-
+**Rules:**  Each chain can contain rules to match specific packets based on type of traffic (e.g. tcp/udp/icmp), destination or source IP, port, etc. Each rule contains a target which determines what to do with packets that match the rule (e.g. accept or reject).  
 **Target:** Each rule contains a target which determines what to do with packets that match the rule (e.g. accept or reject). The available targets are `ACCEPT`, `DROP`, and `REJECT`. The difference between `DROP` and `REJECT`, is that with `REJECT`, a ***connection reset*** for `TCP` and a ***destination host unreachable*** for `UDP/ICMP` is sent to the packet source, while `DROP` dictates that nothing is to be sent to the packet source.
 
 ---
@@ -109,15 +106,8 @@ sudo netfilter-persistent save
 ```
 
 ### References and Further Readings
-1 - [iptables Tutorial: A Beginner's Guide to the Linux Firewall](https://phoenixnap.com/kb/iptables-linux)
-2 - [What Is iptables and How to Use It?](https://medium.com/skilluped/what-is-iptables-and-how-to-use-it-781818422e52)
-3 - [An In-Depth Guide to iptables, the Linux Firewall](https://www.booleanworld.com/depth-guide-iptables-linux-firewall/)
-4 - [Linux for Network Engineers: iptables](https://netbeez.net/blog/linux-iptables/)
+1 - [iptables Tutorial: A Beginner's Guide to the Linux Firewall](https://phoenixnap.com/kb/iptables-linux)  
+2 - [What Is iptables and How to Use It?](https://medium.com/skilluped/what-is-iptables-and-how-to-use-it-781818422e52)  
+3 - [An In-Depth Guide to iptables, the Linux Firewall](https://www.booleanworld.com/depth-guide-iptables-linux-firewall/)  
+4 - [Linux for Network Engineers: iptables](https://netbeez.net/blog/linux-iptables/)  
 5 - [Secure Your Network with iptables](https://medium.com/itversity/secure-your-network-mastering-iptables-command-0abd45ff7e9c)
-
-
-
-
-Pointer's Placeholder
-## Functions
-Functions' Placeholder
