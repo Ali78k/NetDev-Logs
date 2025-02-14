@@ -21,11 +21,13 @@ To have a better understanding of multiplexing, *Applications of Multiplexing* t
 | :----------------: | :----------------: | ------------- |
 | **Optical Networks (WDM)** | Wavelength Division Multiplexing (FDM) | Multiple light wavelengths transmitted in a fiber. |
 | **Telephony (T1/E1 lines)** | TDM | Multiple voice calls transmitted over a single line. |
-| **FM Radio** | FDM | Multiple stations operate at different frequency bands. |
- #### Multiple Access
+| **FM Radio** | FDM | Multiple stations operate at different frequency bands. |  
+
+#### Multiple Access  
 **Multiple access** allows multiple users (UEs, devices) to share the available radio spectrum ==dynamically==. Unlike multiplexing, resources are **not permanently assigned** but are allocated **as needed**.
 so despite of **multiplexing** ,which is about combining multiple signals into one channel **before transmission** and in a **single point-to-point link**, **Multiple Access** is about managing how multiple users share the spectrum **during transmission**.
 Types of Multiple Access are listed below.  
+
 - **FDMA (Frequency Division Multiple Access):** Each user gets a fixed frequency band.  
 - **TDMA (Time Division Multiple Access):** Each user gets a time slot dynamically.  
 - **CDMA (Code Division Multiple Access):** Users share the same frequency but have unique codes.  
