@@ -6,6 +6,72 @@ This page will contain Linux and its tools notes.
 Using VBOX to install a Virtual Machine (VM) and SSHing to it is the first step.
 ### Create a Github Repo
 Git as a Version Control System (VCS) is an important tool that should be utilized.
+
+#### Using ssh-agent to Connect to GitHub
+It's better to use ssh keys. let's do it step-by-step.  
+##### 1. Check for an Existing SSH Key
+First, check if you already have an SSH key:
+
+```sh
+ls -al ~/.ssh
+```
+
+If you see files like `id_rsa` and `id_rsa.pub` (or `id_ed25519` and `id_ed25519.pub`), you already have an SSH key.
+
+##### 2. Generate an SSH Key (if needed)
+If you don’t have an SSH key, generate one:
+
+```sh
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+Follow the prompts and save the key in `~/.ssh/id_ed25519` (or `~/.ssh/id_rsa`).
+
+##### 3. Start the SSH Agent and Add the Key
+Start the `ssh-agent`:
+
+```sh
+eval "$(ssh-agent -s)"
+```
+
+Add your SSH key to the agent:
+
+```sh
+ssh-add ~/.ssh/id_ed25519
+```
+
+##### 4. Add the SSH Key to GitHub
+Copy the public key to your clipboard:
+
+```sh
+cat ~/.ssh/id_ed25519.pub
+```
+
+Go to [GitHub SSH Settings](https://github.com/settings/keys), click **New SSH Key**, and paste the key.
+
+##### 5. Test the Connection
+Run:
+
+```sh
+ssh -T git@github.com
+```
+
+If successful, you'll see:
+
+```sh
+Hi username! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+##### 6. Set SSH for Git
+Ensure Git uses SSH:
+
+```sh
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+git remote set-url origin git@github.com:your-username/repository.git
+```
+
+Now, you can push and pull from GitHub securely using SSH! 
 ### Preparing VS Code
 I think it is better to use `vs code` instead of `vim`. `vs code` is a user friendly, GUI app that make it easier to deal with text files. There are also many extensions to track codes in big projects.
 ### Working with Text Files
