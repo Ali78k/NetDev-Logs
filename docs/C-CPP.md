@@ -76,7 +76,97 @@ Enter number of cycles (1-10) to process (0 to quit): 0
 Good Bye!
 ```
 
+## Arrays
+Working with several separated element isn't so practical. So we utilize arrays. An array is a bunch of ordered elements with same type. It starts with 0 index. Here is an example.
+### Code
+Bubbble sort is a method to sort elements. At each iteration, it fixes the biggest existed number. Time complexity of this algorithm is O(n^2^).
+```c
+#include <stdio.h>
+
+int main()
+{
+    int arr[] = {7,2,3,8,6,9,12};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int temp;
+    for (int i=0; i<n; i++)
+        for(int j=0; j<n-i; j++)
+            if (arr[j] > arr[j+1])
+            {
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+    for (int i=0; i<n; i++)
+        printf("%d\n", arr[i]);
+}
+```
+## Functions
+Functions are functions! they take some parameters(arguments) and give the value. Functions are __defined__ and are __called__; If a function is defined after `main()` it should be __declared__ before the it. Functions help to code in a structured manner.
+```C
+#include <stdio.h>
+
+// Function Declaration
+void myFunction(int a, int b)
+
+// main
+int main()
+{
+    /* some
+    code here
+    */
+    
+    //Function Call
+    myFunction()
+
+}
+
+//Function definition
+void myFunction(int a, int b)
+{
+    /* some
+    code here
+    */
+}
+
+```
+Functions don't have to be called inside main, they can call each other and even the can be called by themselves. These functions are __Recursive Functions__.  
+
+### Code
+In this code we can define a recursive function to solve the **tower of hanoi** Problem. The time complexity of this solution is O(2^n^).  
+Tower of Hanoi is a mathematical puzzle where we have three towers and `n` disks. The objective of the puzzle is to move the entire stack to another tower, obeying the following simple rules:  
+1) Only one disk can be moved at a time.  
+2) Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack i.e. a disk can only be moved if it is the uppermost disk on a stack.  
+3) No disk may be placed on top of a smaller disk.
+```C
+#include <stdio.h>
+
+void hanoiTower (int n, char src, char helping, char dst);
+
+int main ()
+{
+    int n = 8;
+    char src='S'; char dst='D'; char helping='H';
+    hanoiTower(n, src, helping, dst);
+    return 0;
+
+}
+
+void hanoiTower (int n, char src, char helping, char dst)
+{
+    if (n==1)
+        printf("Disk %d: %c -> %c\n", n, src, dst);
+    else
+    {
+        hanoiTower(n-1, src, dst, helping);
+        printf("Disk %d: %c -> %c\n", n, src, dst);
+        hanoiTower(n-1, helping, src, dst);
+    }
+
+}
+
+```
+
+
 ## Pointers
 Pointer's Placeholder
-## Functions
-Functions' Placeholder
+
