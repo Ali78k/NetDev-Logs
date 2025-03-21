@@ -4,7 +4,7 @@ This page will contain C/CPP trainings. There are many problems to solve. let's 
 ## Basic
 In C or any other programming language, there are basic definitions for input/output, variables, mathematical operations, flow control and loops.  
 This is a simple C program that simulates a network packet counter, a tool you might find in Linux or telecommunications systems to track data packets. It demonstrates fundamental C programming concepts—**primitive variables**, **input/output**, **control flow**, and **loops**—all working together in a practical example.  
-### Code
+### Code: Network Packet Counter Simulator
 The code for network packet counter simulator:  
 ```c
 #include <stdio.h>
@@ -78,7 +78,7 @@ Good Bye!
 
 ## Arrays
 Working with several separated element isn't so practical. So we utilize arrays. An array is a bunch of ordered elements with same type. It starts with 0 index. Here is an example.
-### Code
+### Code: Bubble-Sort
 Bubbble sort is a method to sort elements. At each iteration, it fixes the biggest existed number. Time complexity of this algorithm is O(n^2^).
 ```c
 #include <stdio.h>
@@ -98,6 +98,36 @@ int main()
             }
     for (int i=0; i<n; i++)
         printf("%d\n", arr[i]);
+}
+```
+
+### Code: One-Line `for` Loop
+In this short code, we want to count number of array elemnts smaller than `4`.  
+```c
+#include <stdio.h>
+
+int main()
+{
+    int counter = 0;
+    int arr[] = {1,2,3,4,5,6,7,8,9};
+    for (int i = 0; i < sizeof(arr)/sizeof(arr[0]); i++)
+        counter = arr[i] < 4 ? ++counter : counter;
+    printf("Number of elements less than 4: %d\n", counter);
+    return 0;
+}
+```
+
+It could be rewrite as a is shortened code.
+```c
+#include <stdio.h>
+
+int main()
+{
+    int counter = 0;
+    int arr[] = {1,2,3,4,5,6,7,8,9};
+    for (int i = 0; i < sizeof(arr)/sizeof(arr[0]); counter += arr[i++] < 4){}
+    printf("Number of elements less than 4: %d\n", counter);
+    return 0;
 }
 ```
 ## Functions
@@ -131,7 +161,7 @@ void myFunction(int a, int b)
 ```
 Functions don't have to be called inside main, they can call each other and even the can be called by themselves. These functions are __Recursive Functions__.  
 
-### Code
+### Code: Hanoi Tower
 In this code we can define a recursive function to solve the **tower of hanoi** Problem. The time complexity of this solution is O(2^n^).  
 Tower of Hanoi is a mathematical puzzle where we have three towers and `n` disks. The objective of the puzzle is to move the entire stack to another tower, obeying the following simple rules:  
 1) Only one disk can be moved at a time.  
@@ -169,4 +199,56 @@ void hanoiTower (int n, char src, char helping, char dst)
 
 ## Pointers
 Pointer's Placeholder
+
+## File Handling and String Manipulation in C
+File handling in C allows programs to interact with files on the system for reading, writing, or modifying data. This is achieved using standard library functions like `fopen`, `fclose`, `fread`, `fwrite`, `fprintf`, and `fscanf`. These functions enable operations such as opening a file in different modes (e.g., read, write, append), reading data line by line or in chunks, and writing formatted or raw data to files.  
+Strings in C are represented as **arrays of characters terminated by a null character (`'\0'`)**. Common string manipulation functions include `strlen`, `strcpy`, `strcat`, and `strcmp`, which allow developers to calculate string length, copy strings, concatenate them, or compare them. Combining file handling and string manipulation is essential for tasks like parsing text files, searching for specific patterns, or processing logs.  
+### Code: grep-like app  
+Below is an example of a simple `grep-like` application in C. This program reads a file line by line via `fgets()`and prints lines containing a specified search string using `strstr`.
+
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_LINE_LENGTH 1024
+
+int main (int argc, char *argv[])
+{
+    if (argc != 3)
+    {
+        printf ("Usage: %s <filename> <search_string>. \n", argv[0]);
+        return 1;
+    }
+
+    const char *filename = argv[1];
+    const char *search_string = argv[2];
+
+    FILE *file = fopen(filename, "r");
+
+    if (!file)
+    {
+        perror("cannot open the file");
+        return 1;
+    }
+
+    char line[MAX_LINE_LENGTH];
+    int line_number = 0;
+
+    while (fgets(line, sizeof(line), file))
+    {
+        line_number++;
+        // Remove newline character if present -- It is related to printf() function to prevent printing empty line
+        line[strcspn(line, "\n")] = '\0';
+
+        // Check if the line contains the search string
+        if (strstr(line, search_string)) {
+            printf("Line %d: %s\n", line_number, line);
+        }
+    }
+
+    fclose(file);
+    return 0;
+}
+```
 
