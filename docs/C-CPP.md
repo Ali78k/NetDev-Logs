@@ -198,8 +198,199 @@ void hanoiTower (int n, char src, char helping, char dst)
 
 
 ## Pointers
-Pointer's Placeholder
+Pointers are one of the most fundamental and powerful features in C. They allow direct memory access and manipulation, making them essential for efficient programming. This review covers key pointer concepts with sample code.  
+### Code: Pointer to Pointer
+A pointer to a pointer is a variable that stores the address of another pointer. This is useful for modifying pointers inside functions.  
+```c
+#include <stdio.h>
 
+int main() {
+    int a = 10;
+    int *ptr = &a;
+    int **ptr2 = &ptr;
+    
+    printf("Value of a: %d\n", a);
+    printf("Value using ptr: %d\n", *ptr);
+    printf("Value using ptr2: %d\n", **ptr2);
+    printf("Address of a: %p\n", &a);
+    printf("Address of ptr: %p\n", ptr);
+    printf("Address of ptr2: %p\n", ptr2);
+    
+    
+    return 0;
+}
+```
+Result:
+```bash
+Value of a: 10
+Value using ptr: 10
+Value using ptr2: 10
+Address of a: 0x7ffca7bd9e24
+Address of ptr: 0x7ffca7bd9e24
+Address of ptr2: 0x7ffca7bd9e28
+```
+
+### Code: Dynamic Memory Allocation
+Dynamic memory allocation allows allocating memory at runtime using malloc, calloc, realloc, and freeing it with free.  
+```C
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *arr;
+    int n;
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+    arr = (int *)malloc(n * sizeof(int)); // Allocate memory
+    if (arr == NULL) {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+    
+    for (int i = 0; i < n; i++) {
+        arr[i] = i * 10;
+        printf("%d\n", arr[i]);
+    }
+    
+    free(arr); // Free allocated memory
+    return 0;
+}
+```
+### Code: Call by Reference (Returning Multiple Parameters)
+Using pointers, we can return multiple values from a function.  
+```C
+#include <stdio.h>
+
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int x = 5, y = 10;
+    swap(&x, &y);
+    printf("After swapping: x = %d, y = %d\n", x, y);
+    return 0;
+}
+```
+Result:
+```bash
+After swapping: x = 10, y = 5
+```
+### Code: Function Pointer (Selecting a Mathematical Operation)
+
+
+
+Function pointers allow us to select and execute different functions dynamically. Here, we demonstrate their use in selecting a mathematical operation at runtime.  
+```C
+#include <stdio.h>
+
+int add(int a, int b) { return a + b; }
+int subtract(int a, int b) { return a - b; }
+int multiply(int a, int b) { return a * b; }
+
+int main() {
+    int (*operation)(int, int); // Function pointer
+    int choice, a = 10, b = 5;
+    
+    printf("Select operation: 1. Add 2. Subtract 3. Multiply\n");
+    scanf("%d", &choice);
+    
+    switch (choice) {
+        case 1: operation = add; break;
+        case 2: operation = subtract; break;
+        case 3: operation = multiply; break;
+        default: printf("Invalid choice\n"); return 1;
+    }
+    
+    printf("Result: %d\n", operation(a, b));
+    return 0;
+}
+```
+Result:
+```bash
+./function_pointer 
+Select operation: 1. Add 2. Subtract 3. Multiply
+1
+Result: 15
+./function_pointer 
+Select operation: 1. Add 2. Subtract 3. Multiply
+2
+Result: 5
+./function_pointer 
+Select operation: 1. Add 2. Subtract 3. Multiply
+3
+Result: 50
+```
+### Callback Function (Arbitrary Bubble Sort)
+Function pointers enable callbacks, allowing flexible behavior. Here, we use a callback function for sorting.  
+```C
+#include <stdio.h>
+
+void bubbleSort(int arr[], int n, int (*compare)(int, int)) {
+    for (int i=0; i<n-1; i++) {
+        for (int j=0; j<n-i-1; j++) {
+            if (compare(arr[j], arr[j+1])) {
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+}
+
+int ascending(int a, int b) { return a > b; }
+int descending(int a, int b) { return a < b; }
+
+int main() {
+    int arr[] = {7,2,3,8,6,9,12};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    
+    bubbleSort(arr, n, ascending);
+    printf("Sorted in ascending order: ");
+    for (int i=0; i<n; i++) printf("%d ", arr[i]);
+    printf("\n");
+    
+    bubbleSort(arr, n, descending);
+    printf("Sorted in descending order: ");
+    for (int i=0; i<n; i++) printf("%d ", arr[i]);
+    printf("\n");
+    
+    return 0;
+}
+```
+Result:
+```bash
+Sorted in ascending order: 2 3 6 7 8 9 12 
+Sorted in descending order: 12 9 8 7 6 3 2 
+```
+### Code: Lvalue and Rvalue
+In C/C++, an Lvalue (left value) is an object that persists beyond a single expression, meaning it has an identifiable memory location. An Rvalue (right value) is a temporary value that does not have a permanent memory address.  
+A function returning a reference allows modification of its return value, as seen in the following example:  
+```C
+#include <stdio.h>
+
+int& min (int& x, int& y) {
+    return (x < y) ? x : y;
+}
+
+int main() {
+    int x = 3, y = 2;
+    min(x, y) = 6; // Modifies the smaller value directly
+    printf("x = %d, y = %d\n", x, y);
+    return 0;
+}
+```
+It could be compile using `g++`.
+Explain:  
+- `min(x, y)` returns a reference to either `x` or `y`.  
+- Assigning `6` to `min(x, y)` modifies the referenced variable.  
+- If `y` is smaller, `y` becomes `6`, otherwise `x` does.  
+Result:
+```bash
+x = 3, y = 6
+```
 ## File Handling and String Manipulation in C
 File handling in C allows programs to interact with files on the system for reading, writing, or modifying data. This is achieved using standard library functions like `fopen`, `fclose`, `fread`, `fwrite`, `fprintf`, and `fscanf`. These functions enable operations such as opening a file in different modes (e.g., read, write, append), reading data line by line or in chunks, and writing formatted or raw data to files.  
 Strings in C are represented as **arrays of characters terminated by a null character (`'\0'`)**. Common string manipulation functions include `strlen`, `strcpy`, `strcat`, and `strcmp`, which allow developers to calculate string length, copy strings, concatenate them, or compare them. Combining file handling and string manipulation is essential for tasks like parsing text files, searching for specific patterns, or processing logs.  
