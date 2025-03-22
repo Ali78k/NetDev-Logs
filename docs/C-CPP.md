@@ -382,8 +382,8 @@ int main() {
     return 0;
 }
 ```
-It could be compile using `g++`.
-Explain:  
+It could be compile using `g++`.  
+**Explain:**  
 - `min(x, y)` returns a reference to either `x` or `y`.  
 - Assigning `6` to `min(x, y)` modifies the referenced variable.  
 - If `y` is smaller, `y` becomes `6`, otherwise `x` does.  
