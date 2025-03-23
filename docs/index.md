@@ -73,4 +73,4 @@ If you'd like to contribute or suggest improvements, feel free to:
 
 ---
 
-Thank you for visiting! Let's build a more open and innovative future together. 🚀
+Thank you for visiting! Let's build a more open and innovative future together.

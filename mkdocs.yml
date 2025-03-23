@@ -37,7 +37,7 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/ali_kargari
     - icon: fontawesome/brands/linkedin
-      link: linkedin.com/in/ali-kargari-12a6791a4
+      link: https://linkedin.com/in/ali-kargari-12a6791a4
 
 markdown_extensions:
   - pymdownx.highlight:
