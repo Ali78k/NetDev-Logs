@@ -323,7 +323,7 @@ Select operation: 1. Add 2. Subtract 3. Multiply
 3
 Result: 50
 ```
-### Callback Function (Arbitrary Bubble Sort)
+### Code: Callback Function (Arbitrary Bubble Sort)
 Function pointers enable callbacks, allowing flexible behavior. Here, we use a callback function for sorting.  
 ```C
 #include <stdio.h>
@@ -442,4 +442,56 @@ int main (int argc, char *argv[])
     return 0;
 }
 ```
+## Structs and Enums
+Structs are user-defined types in C. They are a combination of several types. Each attribute can be accessible through `.` or `->`, if the struct is defined derectly or using pointers, respectively.  
+On the other hand, `enums` in C are user-defined types that assigns names to a set of integral values, making code more readable.  
+The `typedef` is a keyword that is used to provide existing data types with a new name. The C `typedef` keyword is used to redefine the name of already existing data types including `enums` and `struct`.  
+There are some other topics like **bit fields** and **unions** that won't be mentioned here!
+### Code: Network Status Report
+Here is a simple program that stores network status using `structs` and `enums`.  
+```c
+#include <stdio.h>
 
+typedef enum {
+    DISCONNECTED,
+    CONNECTING,
+    CONNECTED,
+    ERROR
+} NetworkStatus;
+
+typedef struct {
+    char name[20];
+    int id;
+    NetworkStatus status;  // Use the NetworkStatus enum
+} NetworkDevice;
+
+int main() {
+    NetworkDevice device = {"Router_1", 101, CONNECTED};
+
+    // Print device details
+    printf("Device Name: %s\n", device.name);
+    printf("Device ID: %d\n", device.id);
+    printf("Network Status: ");
+
+    // Use a switch to display the status as text
+    switch (device.status) {
+        case DISCONNECTED:
+            printf("Disconnected\n");
+            break;
+        case CONNECTING:
+            printf("Connecting...\n");
+            break;
+        case CONNECTED:
+            printf("Connected\n");
+            break;
+        case ERROR:
+            printf("Error\n");
+            break;
+        default:
+            printf("Unknown status\n");
+    }
+
+    return 0;
+}
+
+```
