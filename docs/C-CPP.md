@@ -495,3 +495,331 @@ int main() {
 }
 
 ```
+
+## Object-Oriented Programming (OOP) in C++ - Detailed Lecture Documentation with Code
+
+This part of document provides a comprehensive and detailed breakdown of the OOP concepts and C++ code examples presented in [the video](https://youtu.be/wN0x9eZLix4?si=2l1-Xj1A7ecabFhC).This video provides a great tutorial for exploring OOP. This section is based on the lecturer's points, with some additional insights I have included.
+
+### Introduction to OOP
+
+The concept of Object-Oriented Programming (OOP) is a programming paradigm. OOP is a methodology for organizing code based on **objects** and serves as a way to model real-world entities in code. The document emphasizes OOP's focus on rules, ideas, and concepts for problem-solving, with an emphasis on representing real-life objects, their attributes, and behaviors. To illustrate this, We use the example of a "car" object. A car has **attributes** like manufacturer, color, and model, and **behaviors** like driving, accelerating, and braking. 
+ 
+
+### Classes and Objects
+
+Now we discusse **classes** and **objects**. A class is a __*user-defined data type*__ that serves as a __*blueprint*__ for creating objects. It groups related data (__*attributes*__) and functions (__*methods*__). Tt is fair to compare classes with predefined data types (int, string, etc.), noting that classes are more complex and can hold multiple variables. Let's create an `Employee` class:
+
+
+```cpp
+    class Employee {
+    public:
+        std::string Name;
+        std::string Company;
+        int Age;
+    };
+```
+
+This class defines the structure for `employee` objects, with attributes for `name`, `company`, and `age`. We can create objects (instances) of the `Employee` class and how to assign values to the object's attributes:
+
+```cpp
+    Employee employee1;
+    employee1.Name = "John Doe";
+    employee1.Company = "ABC Corp";
+    employee1.Age = 30;
+
+    Employee employee2;
+    employee2.Name = "Jane Smith";
+    employee2.Company = "XYZ Inc";
+    employee2.Age = 25;
+```
+
+Here, `employee1` and `employee2` are objects of the `Employee` class.
+
+
+#### Access Modifiers
+
+Attributes of a class can be in different levels of accessibility.  
+* Access modifiers types in C++.  
+    * `private`, `public`, and `protected`.  
+    * Control the visibility and accessibility of class members.  
+* Explanation of the `private` access modifier.  
+    * Members are only accessible within the class.  
+    * Used for data hiding.  
+* Explanation of the `public` access modifier.  
+    * Members are accessible from outside the class.  
+    * Protected is briefly mentioned as a topic for later.  
+    * The code from the previous section demonstrates the use of the `public` access modifier.  
+
+The code from the previous section demonstrates the use of the `public` access modifier, as the attributes `Name`, `Company`, and `Age` are declared as public.
+#### Class Methods
+
+Class methods are functions within a class that define the behaviors of objects. The following C++ code is provided for creating an `introduceYourself()` method for the `Employee` class:  
+
+
+```cpp
+    class Employee {
+    public:
+        std::string Name;
+        std::string Company;
+        int Age;
+
+        void introduceYourself() {
+            std::cout << "Name: " << Name << std::endl;
+            std::cout << "Company: " << Company << std::endl;
+            std::cout << "Age: " << Age << std::endl;
+        }
+    };
+
+    //Calling the method.
+    employee1.introduceYourself();
+```
+
+This method allows an `Employee` object to print its name, company, and age.
+
+#### Constructors
+
+Constructors are special methods automatically called when an object is created and are used to initialize object attributes. It outlines the rules for creating constructors, including having no return type, the same name as the class, and usually being `public`. The following C++ code that modifies the "Employee" class is provided to include a constructor:
+
+```cpp
+    class Employee {
+    public:
+        std::string Name;
+        std::string Company;
+        int Age;
+
+        Employee(std::string name, std::string company, int age) : Name(name), Company(company), Age(age) {}
+
+        void introduceYourself() {
+            std::cout << "Name: " << Name << std::endl;
+            std::cout << "Company: " << Company << std::endl;
+            std::cout << "Age: " << Age << std::endl;
+        }
+    };
+
+    Employee employee1("John Doe", "ABC Corp", 30); // Using the constructor
+    employee1.introduceYourself();
+```
+This constructor initializes the `Name`, `Company`, and `Age` attributes when an `Employee` object is created.
+
+### OOP Principles
+
+There are four pillars for OOP: **Encapsulation**, **Abstraction**, **Inheritance**, and **Polymorphism**.
+
+
+#### Encapsulation
+
+Encapsulation involves bundling data and methods within a class and restricting direct access to data. The following C++ code  implements encapsulation in the "Employee" class:
+
+
+```cpp
+    class Employee {
+    private:
+        std::string Name;
+        std::string Company;
+        int Age;
+
+    public:
+        Employee(std::string name, std::string company, int age) : Name(name), Company(company), Age(age) {}
+
+        std::string getName() const { return Name; }
+        void setName(const std::string& name) { Name = name; }
+
+        std::string getCompany() const { return Company; }
+        void setCompany(const std::string& company) { Company = company; }
+
+        int getAge() const { return Age; }
+        void setAge(int age) { Age = age; }
+
+        void introduceYourself() {
+            std::cout << "Name: " << Name << std::endl;
+            std::cout << "Company: " << Company << std::endl;
+            std::cout << "Age: " << Age << std::endl;
+        }
+    };
+```
+In this encapsulated version, `Name`, `Company`, and `Age` are made private, and public getter and setter methods are provided to control access to them.
+
+
+### Abstraction
+Abstraction involves hiding complex implementation details and presenting a simplified interface. Note that abstract classes cannot be instantiated and pure virtual functions are declared with `= 0`. The following C++ code creates an abstract `AbstractEmployee` class:
+
+```cpp
+    class AbstractEmployee {
+    public:
+        virtual void askForPromotion() = 0; // Pure virtual function
+    };
+
+    class Employee : public AbstractEmployee {
+    private:
+        std::string Name;
+        std::string Company;
+        int Age;
+
+    public:
+        Employee(std::string name, std::string company, int age)
+            : Name(name), Company(company), Age(age) {}
+
+        std::string getName() const { return Name; }
+        void setName(const std::string& name) { Name = name; }
+        std::string getCompany() const { return Company; }
+        void setCompany(const std::string& company) { Company = company; }
+        int getAge() const { return Age; }
+        void setAge(int age) { Age = age; }
+
+        void introduceYourself()  {
+            std::cout << "Name: " << Name << std::endl;
+            std::cout << "Company: " << Company << std::endl;
+            std::cout << "Age: " << Age << std::endl;
+        }
+        void askForPromotion()  {
+             if (Age > 30)
+                std::cout << Name << " got promoted!" << std::endl;
+            else
+                std::cout << Name << " no promotion for you!" << std::endl;
+        }
+    };
+```
+
+Here, `AbstractEmployee` is an abstract class with a pure virtual function `askForPromotion()`. The `Employee` class inherits from `AbstractEmployee` and provides an implementation for this function.
+
+### Inheritance
+
+Inheritance is a mechanism where a derived class (child) inherits attributes and behaviors from a base class (parent), promoting code reusability and creating hierarchical relationships. It uses the example of "Car" as a base class and "ElectricCar" and "ConventionalCar" as derived classes. The following C++ code is provided for creating `Developer` and `Teacher` classes that inherit from the `Employee` class:
+
+```cpp
+
+    class Developer:public Employee { // using public eyword to inheritance attributes
+    public:
+        string FavProgrammingLanguage;
+        Developer(string name, string company, int age, string favProgrammingLanguage)
+            :Employee(name,company,age)
+        {
+            FavProgrammingLanguage = favProgrammingLanguage;
+        }
+        void FixBug() {
+            std::cout << getName() << " fixed bug using " << FavProgrammingLanguage << std::endl;
+        }
+    };
+
+    class Teacher: public Employee // using public eyword to inheritance attributes
+    {
+    public:
+        string Subject;
+        Teacher(string name, string company, int age, string subject)
+            :Employee(name, company, age)
+        {
+            Subject = subject;
+        }
+        void PrepareLesson() {
+            std::cout << Name << " is preparing " << Subject << " lesson" << std::endl;
+        }
+    };
+```
+==Attention:== `Name` attribute reposed to `protected` modifier in `Employee` class.  
+`Developer` and `Teacher` inherit from `Employee` and add specific attributes and methods.
+
+### Polymorphism
+
+Finally, polymorphism is the ability of an object or method to take on many forms. Here, we are focusing on runtime polymorphism with virtual functions. Let's describes how to create a `work()` method in the `Employee` class and override it in the `Developer` and `Teacher` classes. The following C++ code  demonstrates how to use base class pointers to call the appropriate `work()` method for each derived class object, illustrating runtime polymorphism:
+
+```cpp
+    #include <iostream>
+    using std::string;
+
+    class AbstractEmployee {
+        virtual void AskForPromotion() = 0;
+    };
+    class Employee:AbstractEmployee {
+    private:
+        string Company;
+        int Age;
+    protected:
+        string Name;
+    public:
+        void setName(string name) { //setter
+            Name = name;
+        }
+        string getName() { //getter
+            return Name;
+        }
+        void setCompany(string company) { //setter
+            Company = company;
+        }
+        string getCompany() {
+            return Company;
+        }
+        void setAge(int age) {
+            if(age>=18)
+                Age = age;
+        }
+        int getAge() {
+            return Age;
+        }
+        void IntroduceYourself() {
+            std::cout << "Name: " << Name << std::endl;
+            std::cout << "Company: " << Company << std::endl;
+            std::cout << "Age: " << Age << std::endl;
+        }
+        Employee(string name, string company, int age) {
+            Name = name;
+            Company = company;
+            Age = age;
+        }
+        void AskForPromotion() {
+            if (Age>30)
+                std::cout << Name << " got promoted!" << std::endl;
+            else
+                std::cout << Name << ", Sorry, No promotion for you!" << std::endl;
+        }
+        virtual void Work() { //Mode Virtual
+            std::cout << Name << " is checking email, task backlog, performing tasks ..."<< std::endl;
+        }
+    };
+    class Developer:public Employee {
+    public:
+        string FavProgrammingLanguage;
+        Developer(string name, string company, int age, string favProgrammingLanguage)
+            :Employee(name,company,age)
+        {
+            FavProgrammingLanguage = favProgrammingLanguage;
+        }
+        void FixBug() {
+            std::cout << getName() << " fixed bug using " << FavProgrammingLanguage << std::endl;
+        }
+        void Work() {  //Overriden Method
+            std::cout << Name << " is writing " << FavProgrammingLanguage << " code" << std::endl;
+        }
+    };
+
+    class Teacher: public Employee 
+    {
+    public:
+        string Subject;
+        Teacher(string name, string company, int age, string subject)
+            :Employee(name, company, age)
+        {
+            Subject = subject;
+        }
+        void PrepareLesson() {
+            std::cout << Name << " is preparing " << Subject << " lesson" << std::endl;
+        }
+        void Work() {  //Overriden Method
+            std::cout << Name << " is teaching " << Subject << " lesson" << std::endl;
+        }
+    };
+    int main ()
+    {
+        Developer employee3 = Developer("Hamid", "Fana", 24, "C++");
+        Teacher employee4 = Teacher("Mohammad", "Shahrivar School", 59, "biology");
+
+        //Demonstrating Polymorphism
+        Employee* e1 = &employee3;
+        Employee* e2 = &employee4;
+
+        e2->Work(); // Calls Developer's Work()
+        e1->Work(); // Calls Teacher's Work()
+        return 0;
+    }
+```
+
+The `Work()` method is declared as `virtual` in the `Employee` class and overridden in the `Developer` and `Teacher` classes. The code then demonstrates how base class pointers (`e1` and `e2`) can be used to call the appropriate overridden `Work()` method for each derived class object, illustrating runtime polymorphism.  
