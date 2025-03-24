@@ -498,7 +498,7 @@ int main() {
 
 ## Object-Oriented Programming (OOP) in C++ - Detailed Lecture Documentation with Code
 
-This part of document provides a comprehensive and detailed breakdown of the OOP concepts and C++ code examples presented in [the video](https://youtu.be/wN0x9eZLix4?si=2l1-Xj1A7ecabFhC).This video provides a great tutorial for exploring OOP. This section is based on the lecturer's points, with some additional insights I have included.
+This part of document provides a comprehensive and detailed breakdown of the OOP concepts and C++ code examples presented in [the video](https://youtu.be/wN0x9eZLix4?si=2l1-Xj1A7ecabFhC).This video provides a great tutorial for exploring OOP. This section is based on the lecturer's points (thanks to the gemini), with some additional insights I have included.
 
 ### Introduction to OOP
 
