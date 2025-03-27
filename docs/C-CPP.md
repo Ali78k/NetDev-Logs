@@ -646,7 +646,7 @@ In this encapsulated version, `Name`, `Company`, and `Age` are made private, and
 
 #### Abstraction
 Abstraction involves hiding complex implementation details and presenting a simplified interface.  
-!["Abstraction in C++"](./images/AbstractionCpp.png "Data abstraction in C++ [Credit: https://www.softwaretestinghelp.com/data-abstraction-in-cpp/]")
+!["Abstraction in C++"](./images/AbstractionCpp.png "Data abstraction in C++ [Credit: https://www.softwaretestinghelp.com/data-abstraction-in-cpp/]")  
 *Data abstraction in C++ [Credit: https://www.softwaretestinghelp.com/data-abstraction-in-cpp/]*
 Note that abstract classes cannot be instantiated and pure virtual functions are declared with `= 0`. The following C++ code creates an abstract `AbstractEmployee` class with a simple interface:
 
@@ -693,7 +693,7 @@ There is another kind of data abstraction in C++ that is related to header files
 #### Inheritance
 
 Inheritance is a mechanism where a derived class (child) inherits attributes and behaviors from a base class (parent), promoting code reusability and creating hierarchical relationships. It uses the example of "Animal" as a base class and "Dog" as a derived class.  
-!["Inheritance in C++"](./images/InheritanceCpp.webp "Inheritance in C++ [Credit: https://www.programiz.com/cpp-programming/inheritance]")
+!["Inheritance in C++"](./images/InheritanceCpp.webp "Inheritance in C++ [Credit: https://www.programiz.com/cpp-programming/inheritance]")  
 *Inheritance in C++ [Credit: https://www.programiz.com/cpp-programming/inheritance]*
 The following C++ code is provided for creating `Developer` and `Teacher` classes that inherit from the `Employee` class:
 
@@ -732,7 +732,7 @@ The following C++ code is provided for creating `Developer` and `Teacher` classe
 #### Polymorphism
 
 Finally, polymorphism is the ability of an object or method to take on many forms. There are twi tyoes of polymorphism as shown in picture bellow.  
-!["Polymorphism in C++"](./images/PolymorphismCpp.png "Polymorphism in C++ [Credit: https://www.tpointtech.com/cpp-polymorphism]")
+!["Polymorphism in C++"](./images/PolymorphismCpp.png "Polymorphism in C++ [Credit: https://www.tpointtech.com/cpp-polymorphism]")  
 *Polymorphism in C++ [Credit: https://www.tpointtech.com/cpp-polymorphism]*  
 Here, we are focusing on runtime polymorphism with virtual functions. Let's describes how to create a `work()` method in the `Employee` class and override it in the `Developer` and `Teacher` classes. The following C++ code  demonstrates how to use base class pointers to call the appropriate `work()` method for each derived class object, illustrating runtime polymorphism:
 
