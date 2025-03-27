@@ -608,7 +608,11 @@ There are four pillars for OOP: **Encapsulation**, **Abstraction**, **Inheritanc
 
 #### Encapsulation
 
-Encapsulation involves bundling data and methods within a class and restricting direct access to data. The following C++ code  implements encapsulation in the "Employee" class:
+Encapsulation involves bundling data and methods within a class and restricting direct access to data. You can add any attribute to your class and set proper access control policy for each one. There are 3 types of access modifier as depicted in figure below.  
+!["Encapsulation in C++"](./images/EncapsulationCppAS.png "Encapsulation in C++ [Credit: https://logicmojo.com/encapsulation-in-cpp]")  
+*Encapsulation in C++ [Credit: https://logicmojo.com/encapsulation-in-cpp]*
+
+The following C++ code implements encapsulation in the "Employee" class:
 
 
 ```cpp
@@ -640,8 +644,11 @@ Encapsulation involves bundling data and methods within a class and restricting 
 In this encapsulated version, `Name`, `Company`, and `Age` are made private, and public getter and setter methods are provided to control access to them.
 
 
-### Abstraction
-Abstraction involves hiding complex implementation details and presenting a simplified interface. Note that abstract classes cannot be instantiated and pure virtual functions are declared with `= 0`. The following C++ code creates an abstract `AbstractEmployee` class:
+#### Abstraction
+Abstraction involves hiding complex implementation details and presenting a simplified interface.  
+!["Abstraction in C++"](./images/AbstractionCpp.png "Data abstraction in C++ [Credit: https://www.softwaretestinghelp.com/data-abstraction-in-cpp/]")
+*Data abstraction in C++ [Credit: https://www.softwaretestinghelp.com/data-abstraction-in-cpp/]*
+Note that abstract classes cannot be instantiated and pure virtual functions are declared with `= 0`. The following C++ code creates an abstract `AbstractEmployee` class with a simple interface:
 
 ```cpp
     class AbstractEmployee {
@@ -680,11 +687,15 @@ Abstraction involves hiding complex implementation details and presenting a simp
     };
 ```
 
-Here, `AbstractEmployee` is an abstract class with a pure virtual function `askForPromotion()`. The `Employee` class inherits from `AbstractEmployee` and provides an implementation for this function.
+Here, `AbstractEmployee` is an abstract class with a pure virtual function `askForPromotion()`. The `Employee` class inherits from `AbstractEmployee` and provides an implementation for this function.  
+There is another kind of data abstraction in C++ that is related to header files which is not discussed here.
 
-### Inheritance
+#### Inheritance
 
-Inheritance is a mechanism where a derived class (child) inherits attributes and behaviors from a base class (parent), promoting code reusability and creating hierarchical relationships. It uses the example of "Car" as a base class and "ElectricCar" and "ConventionalCar" as derived classes. The following C++ code is provided for creating `Developer` and `Teacher` classes that inherit from the `Employee` class:
+Inheritance is a mechanism where a derived class (child) inherits attributes and behaviors from a base class (parent), promoting code reusability and creating hierarchical relationships. It uses the example of "Animal" as a base class and "Dog" as a derived class.  
+!["Inheritance in C++"](./images/InheritanceCpp.webp "Inheritance in C++ [Credit: https://www.programiz.com/cpp-programming/inheritance]")
+*Inheritance in C++ [Credit: https://www.programiz.com/cpp-programming/inheritance]*
+The following C++ code is provided for creating `Developer` and `Teacher` classes that inherit from the `Employee` class:
 
 ```cpp
 
@@ -718,9 +729,12 @@ Inheritance is a mechanism where a derived class (child) inherits attributes and
 ==Attention:== `Name` attribute reposed to `protected` modifier in `Employee` class.  
 `Developer` and `Teacher` inherit from `Employee` and add specific attributes and methods.
 
-### Polymorphism
+#### Polymorphism
 
-Finally, polymorphism is the ability of an object or method to take on many forms. Here, we are focusing on runtime polymorphism with virtual functions. Let's describes how to create a `work()` method in the `Employee` class and override it in the `Developer` and `Teacher` classes. The following C++ code  demonstrates how to use base class pointers to call the appropriate `work()` method for each derived class object, illustrating runtime polymorphism:
+Finally, polymorphism is the ability of an object or method to take on many forms. There are twi tyoes of polymorphism as shown in picture bellow.  
+!["Polymorphism in C++"](./images/PolymorphismCpp.png "Polymorphism in C++ [Credit: https://www.tpointtech.com/cpp-polymorphism]")
+*Polymorphism in C++ [Credit: https://www.tpointtech.com/cpp-polymorphism]*  
+Here, we are focusing on runtime polymorphism with virtual functions. Let's describes how to create a `work()` method in the `Employee` class and override it in the `Developer` and `Teacher` classes. The following C++ code  demonstrates how to use base class pointers to call the appropriate `work()` method for each derived class object, illustrating runtime polymorphism:
 
 ```cpp
     #include <iostream>
