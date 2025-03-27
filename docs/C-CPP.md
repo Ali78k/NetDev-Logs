@@ -610,8 +610,7 @@ There are four pillars for OOP: **Encapsulation**, **Abstraction**, **Inheritanc
 
 Encapsulation involves bundling data and methods within a class and restricting direct access to data. You can add any attribute to your class and set proper access control policy for each one. There are 3 types of access modifier as depicted in figure below.  
 !["Encapsulation in C++"](./images/EncapsulationCppAS.png "Encapsulation in C++ [Credit: https://logicmojo.com/encapsulation-in-cpp]")  
-*Encapsulation in C++ [Credit: https://logicmojo.com/encapsulation-in-cpp]*
-
+*Encapsulation in C++ [Credit: https://logicmojo.com/encapsulation-in-cpp]*  
 The following C++ code implements encapsulation in the "Employee" class:
 
 
@@ -647,7 +646,7 @@ In this encapsulated version, `Name`, `Company`, and `Age` are made private, and
 #### Abstraction
 Abstraction involves hiding complex implementation details and presenting a simplified interface.  
 !["Abstraction in C++"](./images/AbstractionCpp.png "Data abstraction in C++ [Credit: https://www.softwaretestinghelp.com/data-abstraction-in-cpp/]")  
-*Data abstraction in C++ [Credit: https://www.softwaretestinghelp.com/data-abstraction-in-cpp/]*
+*Data abstraction in C++ [Credit: https://www.softwaretestinghelp.com/data-abstraction-in-cpp/]*  
 Note that abstract classes cannot be instantiated and pure virtual functions are declared with `= 0`. The following C++ code creates an abstract `AbstractEmployee` class with a simple interface:
 
 ```cpp
@@ -694,7 +693,7 @@ There is another kind of data abstraction in C++ that is related to header files
 
 Inheritance is a mechanism where a derived class (child) inherits attributes and behaviors from a base class (parent), promoting code reusability and creating hierarchical relationships. It uses the example of "Animal" as a base class and "Dog" as a derived class.  
 !["Inheritance in C++"](./images/InheritanceCpp.webp "Inheritance in C++ [Credit: https://www.programiz.com/cpp-programming/inheritance]")  
-*Inheritance in C++ [Credit: https://www.programiz.com/cpp-programming/inheritance]*
+*Inheritance in C++ [Credit: https://www.programiz.com/cpp-programming/inheritance]*  
 The following C++ code is provided for creating `Developer` and `Teacher` classes that inherit from the `Employee` class:
 
 ```cpp
