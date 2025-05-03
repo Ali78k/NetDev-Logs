@@ -76,6 +76,38 @@ Now, you can push and pull from GitHub securely using SSH!
 I think it is better to use `vs code` instead of `vim`. `vs code` is a user friendly, GUI app that make it easier to deal with text files. There are also many extensions to track codes in big projects.
 ### Working with Text Files
 There are many powerful tools in linux that can be used in editing or displaying text files. `cat`, `tr`, `awk`, `cut`, `sort` and `uniq` are the most useful ones.
+## Drive in Linux
+### Introduction
+Drives are known as physical disks used to permanently store data into them. The first step towards organizing the storage on a disk is `Disk Partitioning`. It involves dividing a disk into separate sections, each functioning as an independent disk, which can be managed separately. This segregation helps in managing files, running different operating systems on the same disk, or creating a dedicated space for specific data.  
+There are three types of partitions:  
+__1. Primary Partitions:__ Directly accessible and used for booting the system. A disk can have up to four primary partitions.  
+__2 Extended Partitions:__ Created within a primary partition, acting as a container that can hold multiple logical partitions. This is a workaround for the four-partition limit.  
+__3. Logical Partitions:__ Nested within an extended partition, allowing for more than four partitions on a disk.  
+A partition table tells the operating system how the partitions and data on the drive are organized. Master Boot Record (MBR) and GUID Partition Table (GPT) are two types of partition tables. MBR is a bit of reserved space at the beginning of the drive that contains the information about how the partitions are organized. The MBR also contains code to launch the operating system, and it's sometimes called the Boot Loader. GPT is a newer standard that's slowly replacing MBR. Unlike an MBR partition table, GPT stores the data about how all the partitions are organized and how to boot the OS throughout the drive.  
+
+
+| Partiotion Table | # of Primary Partitions | Max. of Disk Usage |
+| :---: | :---: | :---: |
+| MBR | Up to 4 | Up to 2 TB |
+| GPT| Up to 128 |  Up to 1 bilion TB |
+
+A __file system__ dictates how data is stored and retrieved. ==Each partition can use a different file system== (`ext4`, `NTFS`, `FAT32`, etc.), affecting performance, storage efficiency, and compatibility. 
+As a general rule, `ext4` is better suited for handling a large number of small files, while `xfs` performs better when dealing with a smaller number of large files.  
+Linux offers a plethora of tools for disk partitioning, including:  
+__1. fdisk:__ A command-line utility ideal for MBR disks.
+__2. gdisk:__ Similar to fdisk but for GPT disks.
+__3. parted:__ A versatile tool that supports both MBR and GPT disks.
+### Logical Volume Management
+
+### Linux Commands
+
+#### Example Scenario
+
+
+
+
+
+
 ## Firewall in Linux: `iptables`
 The Linux kernel comes with a packet filtering framework named `netfilter`. It allows you to allow, drop and modify traffic leaving in and out of a system. A tool, `iptables` builds upon this functionality to provide a powerful firewall, which you can configure by adding rules. In addition, other programs such as `fail2ban` also use iptables to block attackers.  
 Iptables relies on a set of `rules` organized into `chains` that determine the fate of incoming packets. It checks each packet against these rules to decide whether to **allow** it, **drop** it, or **forward** it to another `chain`. With iptables, you have full control over the network flow, allowing you to **filter**, **block**, or **shape** traffic as needed.  
