@@ -174,7 +174,7 @@ Create VM (top-right).
 - **General:** Name it (e.g., ubuntu01).  
 - **OS:** Select the uploaded ISO.  
 - **System:** Keep defaults (BIOS SeaBIOS is fine for old PCs).  
--  **Hard Disk:** SCSI, on local-lvm, size e.g., 40 GB.  
+- **Hard Disk:** SCSI, on local-lvm, size e.g., 40 GB.  
 - **CPU:** Host type, 2 cores.  
 - **Memory:** 4096 MB (4 GB).  
 - **Network:** Bridge vmbr0; Model VirtIO (paravirtualized).  
@@ -204,9 +204,9 @@ First of all, add a new disk from VM hardware panel. After that you can see this
 You can think of LVM as "dynamic partitions": it lets you create, resize, and delete logical volumes from the command line while Linux is running, so the kernel immediately recognizes the changes without a reboot.  
 LVM lets you merge physical volumes into volume groups and then create, resize, or delete logical volumes as flexible partitions.  
 So the structure is made up with 3 entity:  
-- **Physical Volumes (`pv`)**: physical block devices (or device-mapper devices) with an LVM header - the raw building blocks.  
-- **Volume Groups (`vg`):** pools that combine physical volumes into a single logical storage pool.  
-- **Logical Volumes (`lv`):** flexible “partitions” carved from a volume group that users and applications use.  
+- **Physical Volumes (PV):** physical block devices (or device-mapper devices) with an LVM header - the raw building blocks.  
+- **Volume Groups (VG):** pools that combine physical volumes into a single logical storage pool.  
+- **Logical Volumes (LV):** flexible “partitions” carved from a volume group that users and applications use.  
 
 to read new partitions use `sudo partprobe`, then you can create a PV by prompting `sudo pvcreate /dev/sdb1`. To extend `ubuntu-vg` Volume Group and `lv-0` Logical Volume:  
 ```
