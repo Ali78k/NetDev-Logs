@@ -1,0 +1,1038 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../RAN/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Virtualization - DevNet Logs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Virtualization - DevNet Logs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="./assets/images/social/Virtualization.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="None" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Virtualization - DevNet Logs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="./assets/images/social/Virtualization.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#virtualization" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DevNet Logs" class="md-header__button md-logo" aria-label="DevNet Logs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DevNet Logs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Virtualization
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome to My Open RAN and 5G Documentation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../C-CPP/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  C/CPP Training
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Linux/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Linux
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../RAN/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Radio Access Network
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Virtualization
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DevNet Logs" class="md-nav__button md-logo" aria-label="DevNet Logs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DevNet Logs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome to My Open RAN and 5G Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C-CPP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C/CPP Training
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RAN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Radio Access Network
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Virtualization
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Virtualization
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definitions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-virtualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Virtualization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hypervisors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hypervisors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers-vs-virtual-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Containers vs Virtual Machines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling-in-virtualized-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scaling in Virtualized Environments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtualization-tools-and-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtualization Tools and Ecosystem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-and-further-readings" class="md-nav__link">
+    <span class="md-ellipsis">
+      References and Further Readings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtual Machines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Virtual Machines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-proxmox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Proxmox
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Proxmox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-bootable-usb-with-rufus-on-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a bootable USB with Rufus (on Windows)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#biosuefi-setup-on-the-old-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      BIOS/UEFI setup on the old PC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-proxmox-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Proxmox VE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-login-web-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      First login (Web UI)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-install-housekeeping-no-subscription-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-install housekeeping (no subscription repo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-layout-use-multiple-disks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storage layout (use multiple disks)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-a-linux-iso-and-create-the-first-vm-ubuntu-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upload a Linux ISO and create the first VM (Ubuntu example)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Upload a Linux ISO and create the first VM (Ubuntu example)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upload-iso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upload ISO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create VM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale-up-the-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scale Up The Storage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="virtualization">Virtualization</h1>
+<p>This page will contain information about virtualization in computing systems.</p>
+<ul>
+<li><a href="#virtualization">Virtualization</a></li>
+<li><a href="#definitions">Definitions</a><ul>
+<li><a href="#types-of-virtualization">Types of Virtualization</a></li>
+<li><a href="#hypervisors">Hypervisors</a></li>
+<li><a href="#containers-vs-virtual-machines">Containers vs Virtual Machines</a></li>
+<li><a href="#scaling-in-virtualized-environments">Scaling in Virtualized Environments</a></li>
+<li><a href="#virtualization-tools-and-ecosystem">Virtualization Tools and Ecosystem</a></li>
+<li><a href="#references-and-further-readings">References and Further Readings</a></li>
+</ul>
+</li>
+<li><a href="#virtual-machines">Virtual Machines</a><ul>
+<li><a href="#install-proxmox">Install Proxmox</a></li>
+<li><a href="#download-files">Download files</a></li>
+<li><a href="#create-a-bootable-usb-with-rufus-on-windows">Create a bootable USB with Rufus (on Windows)</a></li>
+<li><a href="#biosuefi-setup-on-the-old-pc">BIOS/UEFI setup on the old PC</a></li>
+<li><a href="#install-proxmox-ve">Install Proxmox VE</a></li>
+<li><a href="#first-login-web-ui">First login (Web UI)</a></li>
+<li><a href="#post-install-housekeeping-no-subscription-repo">Post-install housekeeping (no subscription repo)</a></li>
+<li><a href="#storage-layout-use-multiple-disks">Storage layout (use multiple disks)</a></li>
+<li><a href="#upload-a-linux-iso-and-create-the-first-vm-ubuntu-example">Upload a Linux ISO and create the first VM (Ubuntu example)</a><ul>
+<li><a href="#upload-iso">Upload ISO</a></li>
+<li><a href="#create-vm">Create VM</a></li>
+<li><a href="#scale-up-the-storage">Scale Up The Storage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="definitions">Definitions</h2>
+<p>Virtualization is the process of creating an <strong>abstract layer</strong> between hardware resources and the software that uses them. Instead of applications directly accessing physical hardware, a virtualization layer (hypervisor or container runtime) allows multiple <strong>isolated environments</strong> to share the <strong>same physical system</strong> efficiently. Using it lets us fully utilize hardware capabilities and makes disaster recovery easier. However, it introduces some security risks and software licensing costs.  </p>
+<h3 id="types-of-virtualization">Types of Virtualization</h3>
+<ul>
+<li>
+<p><strong>Hardware Virtualization:</strong> Full virtual machines (VMs) with dedicated virtual CPUs, memory, disks, and NICs.</p>
+</li>
+<li>
+<p><strong>Operating System Virtualization:</strong> Containers running on a shared kernel while remaining isolated from each other (e.g., Docker, Podman, LXC).</p>
+</li>
+<li>
+<p><strong>Storage Virtualization:</strong> Abstracting storage resources into pools for flexible provisioning.</p>
+</li>
+<li>
+<p><strong>Network Virtualization:</strong> Overlay networks and SDN (Software-Defined Networking) to decouple network services from hardware.</p>
+</li>
+</ul>
+<h3 id="hypervisors">Hypervisors</h3>
+<ul>
+<li>
+<p><strong>Type 1 (Bare-metal):</strong> Run directly on the hardware (e.g., <code>VMware ESXi</code>, <code>Proxmox VE</code>, <code>Xen</code>, <code>Hyper-V</code>).</p>
+</li>
+<li>
+<p><strong>Type 2 (Hosted):</strong> Run on top of a host operating system (e.g., <code>VirtualBox</code>, <code>VMware Workstation</code>).</p>
+</li>
+</ul>
+<h3 id="containers-vs-virtual-machines">Containers vs Virtual Machines</h3>
+<ul>
+<li>
+<p><strong>VMs:</strong> Each VM runs its own guest OS, providing full isolation and flexibility but with higher overhead.</p>
+</li>
+<li>
+<p><strong>Containers:</strong> Share the host OS kernel, lightweight and faster, ideal for microservices and DevOps workflows.</p>
+</li>
+</ul>
+<p><img alt="Virtualization types: Container-based and VM-based." src="../images/Virtualization.webp" title="Virtualization types: Container-based and VM-based." />
+<em>Virtualization types: Container-based and VM-based -- Reference: <a href="https://www.aquasec.com/cloud-native-academy/docker-container/containerization-vs-virtualization/">aquasec.com</a></em></p>
+<h3 id="scaling-in-virtualized-environments">Scaling in Virtualized Environments</h3>
+<ul>
+<li>
+<p><strong>Scale Up (Vertical Scaling):</strong> Adding more resources (CPU, RAM, storage) to a single VM or container. Example: resizing a VM disk using <code>fdisk</code>, <code>vgextend</code>, <code>lvextend</code>, and <code>resizefs</code>.</p>
+</li>
+<li>
+<p><strong>Scale Out (Horizontal Scaling):</strong> Adding more VMs or containers to distribute workload across multiple nodes. Common in <code>Kubernetes</code> or cloud-native architectures.</p>
+</li>
+</ul>
+<h3 id="virtualization-tools-and-ecosystem">Virtualization Tools and Ecosystem</h3>
+<p><strong>Hypervisors:</strong> <code>Proxmox VE</code>, <code>VMware ESXi</code>, <code>KVM</code>, <code>Xen</code>.</p>
+<p><strong>Container Runtimes:</strong> <code>Docker</code>, <code>Podman</code>, <code>containerd</code>.</p>
+<p><strong>DevOps &amp; Orchestration:</strong> <code>Terraform</code> (infrastructure as code), <code>Ansible</code> (automation), <code>Kubernetes</code> (orchestration), <code>GitLab CI</code>, <code>Nexus</code> (artifact repository).</p>
+<h3 id="references-and-further-readings">References and Further Readings</h3>
+<ol>
+<li><a href="https://www.geeksforgeeks.org/cloud-computing/virtualization-cloud-computing-types/">Virtualization in Cloud Computing and Types</a>  </li>
+<li><a href="https://www.techtarget.com/searchitoperations/definition/virtualization">Virtualization - TechTarget</a>  </li>
+<li><a href="https://www.aquasec.com/cloud-native-academy/docker-container/containerization-vs-virtualization/">Containerization vs. Virtualization: Key Differences and Use Cases</a></li>
+</ol>
+<h2 id="virtual-machines">Virtual Machines</h2>
+<p>Virtualization on a host OS is old hat and not very exciting anymore. My first stop was VMware ESXi, but hardware limitations made it frustrating. That’s when I shifted to Proxmox VE, and it clicked immediately. Open-source, lightweight, community-driven — and it just worked with my old hardware. So let's begin with installing Proxmox.</p>
+<h3 id="install-proxmox">Install Proxmox</h3>
+<h4 id="download-files">Download files</h4>
+<p>Proxmox VE ISO: from the official Proxmox site (Downloads → ISO Images).<br />
+Rufus (to make a USB installer): download from rufus.ie (portable EXE, no install needed).  </p>
+<h4 id="create-a-bootable-usb-with-rufus-on-windows">Create a bootable USB with Rufus (on Windows)</h4>
+<p>Insert an 8 GB+ USB stick (it will be erased).<br />
+Open Rufus → Device: your USB.<br />
+Boot selection: pick the Proxmox ISO you downloaded.<br />
+Partition scheme:<br />
+- MBR if the target PC boots in Legacy BIOS.<br />
+- GPT if the PC boots in UEFI.<br />
+Leave File system = FAT32, Cluster size = default.<br />
+Click Start → OK to write in ISO mode.  </p>
+<h4 id="biosuefi-setup-on-the-old-pc">BIOS/UEFI setup on the old PC</h4>
+<p>Consider these points:<br />
+- Enable Intel VT-x/AMD-V (virtualization).<br />
+- (If present) enable VT-d/IOMMU.<br />
+- Disable Secure Boot (older hardware may not have this).<br />
+- Set USB as the first boot device (or use the one-time boot menu key).  </p>
+<h4 id="install-proxmox-ve">Install Proxmox VE</h4>
+<p>First considerations:<br />
+- Boot from the USB → choose Install Proxmox VE (Graphical).<br />
+- License: accept.<br />
+- Target disk: pick your SSD (fastest).<br />
+- File system: choose LVM/ext4 (recommended for 16 GB RAM). Avoid ZFS on low RAM.<br />
+- Country/Time/Keyboard: set yours.<br />
+- Password &amp; Email: set root password (this is for Proxmox login).  </p>
+<p>Management network:<br />
+- Pick your NIC (e.g., enp3s0/eth0).<br />
+- Set a Static IP if possible (recommended), e.g.<br />
+  - IP: 192.168.1.100<br />
+  - Netmask: 255.255.255.0<br />
+  - Gateway: 192.168.1.1 (your router)<br />
+  - DNS: your router or 1.1.1.1  </p>
+<p>Install → Reboot → remove USB.  </p>
+<h4 id="first-login-web-ui">First login (Web UI)</h4>
+<p>On another machine on the same LAN, open:<br />
+<code>https://&lt;your-proxmox-node-ip&gt;:8006</code> (e.g., <code>https://192.168.1.100:8006</code>)<br />
+Ignore the certificate warning (self-signed).<br />
+Login: root + the password you set.  </p>
+<p><img alt="Proxmox First Login on the Web UI" src="../images/proxmox-first-login.png" />
+<em>Proxmox First Login on the Web UI</em>  </p>
+<h4 id="post-install-housekeeping-no-subscription-repo">Post-install housekeeping (no subscription repo)</h4>
+<p>By default, Proxmox points to the enterprise repo (requires a subscription). Switch to the free repo:<br />
+Open Shell in the Web UI (top-right) or SSH to the node, then:<br />
+ - Disable the enterprise repo:  </p>
+<p>Go to Web UI, from the left panel, choose node (here <code>pve</code>) -&gt; Updates -&gt; Repositories. Select <code>pve-enterprise-sources</code> and <code>ceph-sources</code>, and disable them.<br />
+ - Enable the no-subscription repo (Proxmox VE 8.x on Debian 13 <code>trixie</code>):  </p>
+<p>Open a shell, <code>editor /etc/apt/sources.lists.d/pve-no-subscription</code> and paste following content:<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>deb http://download.proxmox.com/debian/pve trixie pve-no-subscription
+</code></pre></div>
+Now, You can update and upgrade the OS:<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>apt update
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>apt full-upgrade -y
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>reboot
+</code></pre></div></p>
+<p>After reboot, you’re on the latest Proxmox VE 8 (free/no-subscription).  </p>
+<h4 id="storage-layout-use-multiple-disks">Storage layout (use multiple disks)</h4>
+<p><strong>local-lvm (thin):</strong> default place for VM disks (lives on the SSD—fast).  </p>
+<p><strong>local:</strong> for ISO images &amp; backups (also on SSD by default).  </p>
+<p>To add any other drive for VM disks/ISO/backups:  </p>
+<p><code>Datacenter → &lt;node&gt; → Disks → Directory → Create</code>  </p>
+<p>Point it to your drive (e.g., <code>/mnt/hdd1</code>), format <code>ext4</code>, give it an ID (e.g., <code>hdd-dir</code>).  </p>
+<p>Then go to <code>Datacenter → Storage → Add → Directory</code>, pick that path and enable <code>Disk image and/or ISO image</code> as you like.  </p>
+<h4 id="upload-a-linux-iso-and-create-the-first-vm-ubuntu-example">Upload a Linux ISO and create the first VM (Ubuntu example)</h4>
+<h5 id="upload-iso">Upload ISO</h5>
+<p><code>Datacenter → &lt;node&gt; → local (Storage) → ISO Images → Upload → pick ubuntu-XX.YY-server.iso.</code>  </p>
+<h5 id="create-vm">Create VM</h5>
+<p>Create VM (top-right).  </p>
+<ul>
+<li><strong>General:</strong> Name it (e.g., ubuntu01).  </li>
+<li><strong>OS:</strong> Select the uploaded ISO.  </li>
+<li><strong>System:</strong> Keep defaults (BIOS SeaBIOS is fine for old PCs).  </li>
+<li><strong>Hard Disk:</strong> SCSI, on local-lvm, size e.g., 40 GB.  </li>
+<li><strong>CPU:</strong> Host type, 2 cores.  </li>
+<li><strong>Memory:</strong> 4096 MB (4 GB).  </li>
+<li><strong>Network:</strong> Bridge vmbr0; Model VirtIO (paravirtualized).  </li>
+</ul>
+<p>Before first boot: <code>VM → Options → QEMU Guest Agent → Enable = Yes.</code><br />
+Start the VM: <code>Console → install Ubuntu</code> (tick <code>OpenSSH server</code> during install).  </p>
+<p>Inside the VM after first boot:<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo apt update
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sudo apt install -y qemu-guest-agent
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>sudo systemctl enable --now qemu-guest-agent
+</code></pre></div></p>
+<p>Now you can SSH in from your LAN:<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ssh &lt;username&gt;@&lt;vm-ip&gt;
+</code></pre></div></p>
+<p>(Find the VM’s IP in Proxmox summary once the guest agent isactive on the VM config and is running (<code>apt-get install qemu-guest-agent</code>) in the VM OS, or simply via <code>ip a</code> in the VM shell.)<br />
+<img alt="First VM Stats" src="../images/proxmox-first-vm.png" />
+<em>First VM Stats in Proxmox</em>  </p>
+<h5 id="scale-up-the-storage">Scale Up The Storage</h5>
+<p>First of all, add a new disk from VM hardware panel. After that you can see this on the <code>lsblk</code> command output. if its name is <code>/dev/sdb</code>, use <code>fdisk /dev/sdb</code> command to format this. you have to press <code>n</code> to create new filesystem, <code>p</code> for primary, and some <code>enter</code> keys to confirm default values. after that, you can use <code>t</code> to change type of it to <code>8e</code> i.e.  <code>linux-lvm</code>.  </p>
+<p>You can think of LVM as "dynamic partitions": it lets you create, resize, and delete logical volumes from the command line while Linux is running, so the kernel immediately recognizes the changes without a reboot.<br />
+LVM lets you merge physical volumes into volume groups and then create, resize, or delete logical volumes as flexible partitions.<br />
+So the structure is made up with 3 entity:<br />
+- <strong>Physical Volumes (PV):</strong> physical block devices (or device-mapper devices) with an LVM header - the raw building blocks.<br />
+- <strong>Volume Groups (VG):</strong> pools that combine physical volumes into a single logical storage pool.<br />
+- <strong>Logical Volumes (LV):</strong> flexible “partitions” carved from a volume group that users and applications use.  </p>
+<p>to read new partitions use <code>sudo partprobe</code>, then you can create a PV by prompting <code>sudo pvcreate /dev/sdb1</code>. To extend <code>ubuntu-vg</code> Volume Group and <code>lv-0</code> Logical Volume:<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo vgextend ubuntu-vg /dev/sdb1
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>lvextend -l +100%FREE  /dev/ubuntu-vg/lv-0
+</code></pre></div>
+Then you can resizes the filesystem on the logical volume to match the LV’s new size and check it.<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>resize2fs /dev/ubuntu-vg/lv-0
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>df -h
+</code></pre></div>
+You’re all set - once the filesystem resize completes and you verify the new size with <code>df -h</code>, the extra space from the added disk is available to the system and applications immediately. This lets you grow storage <strong>on the fly</strong> without downtime, and you can repeat the same <code>PV → VG → LV</code> steps later if you add more disks or need to reallocate space.  </p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2025 <a href="https://github.com/Ali78k"  target="_blank" rel="noopener">Ali Kargari</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Ali78k" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M202.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M496 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/ali_kargari" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/ali-kargari-12a6791a4" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

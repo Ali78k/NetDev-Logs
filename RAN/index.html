@@ -1,0 +1,923 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Linux/">
+      
+      
+        <link rel="next" href="../Virtualization/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Radio Access Network - DevNet Logs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Radio Access Network - DevNet Logs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="./assets/images/social/RAN.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="None" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Radio Access Network - DevNet Logs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="./assets/images/social/RAN.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#radio-access-network" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DevNet Logs" class="md-header__button md-logo" aria-label="DevNet Logs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DevNet Logs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Radio Access Network
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome to My Open RAN and 5G Documentation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../C-CPP/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  C/CPP Training
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Linux/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Linux
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Radio Access Network
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Virtualization/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Virtualization
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DevNet Logs" class="md-nav__button md-logo" aria-label="DevNet Logs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DevNet Logs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome to My Open RAN and 5G Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C-CPP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C/CPP Training
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Radio Access Network
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Radio Access Network
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-and-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic and Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic and Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scheduling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scheduling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiplexing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiplexing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scheduling_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scheduling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scheduling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scheduling-basics-in-4g" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scheduling Basics, in 4G
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scheduling-in-5g" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scheduling in 5G
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-of-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Scheduling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Scheduling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#link-adaptation-power-vs-rate-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link Adaptation: Power vs. Rate Control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channel-dependent-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Channel-Dependent Scheduling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-and-further-readings" class="md-nav__link">
+    <span class="md-ellipsis">
+      References and Further Readings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocol-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocol Stack
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Virtualization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Virtualization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="radio-access-network">Radio Access Network</h1>
+<p>This page will contain concepts in Radio Access Network (RAN).</p>
+<h2 id="basic-and-concepts">Basic and Concepts</h2>
+<p>This section is the most topic that related to telecommunications.</p>
+<h3 id="scheduling">Scheduling</h3>
+<p>To investigate scheduling, it is better to start with <strong>multiplexing</strong> and <strong>multiple access</strong>.<br />
+In communication systems, <strong>multiplexing</strong> and <strong>multiple access</strong> are two fundamental concepts that help manage and optimize resource allocation. Though they seem similar, they serve different purposes.<br />
+Let's start with multiplexing</p>
+<h4 id="multiplexing">Multiplexing</h4>
+<p><strong>Multiplexing</strong> is used when multiple signals need to be transmitted over a shared medium efficiently. The key idea is <strong>pre-planned resource allocation</strong>, meaning that bandwidth or time is divided among signals in a fixed way. So, in multiplexing it is <strong>easy to coordinate</strong> the senders.<br />
+Multiplexing is used in a <mark>point-to-point situation</mark> for example in backhaul, when different data sources come into one backhaul link and then go to its destiny:).<br />
+There are 4 types of Multiplexing:<br />
+- <strong>TDM (Time Division Multiplexing):</strong> Each signal gets a fixed time slot, even if it has nothing to send.<br />
+- <strong>FDM (Frequency Division Multiplexing):</strong> Each signal is assigned a fixed frequency band.<br />
+- <strong>CDM (Code Division Multiplexing):</strong> Each signal gets a unique code to separate it from others.<br />
+- <strong>SDM (Space Division Multiplexing):</strong> Signals are separated based on different spatial paths (e.g., MIMO in wireless systems).<br />
+To have a better understanding of multiplexing, <em>Applications of Multiplexing</em> table are prepared.  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Application</strong></th>
+<th style="text-align: center;"><strong>Multiplexing Type</strong></th>
+<th><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Optical Networks (WDM)</strong></td>
+<td style="text-align: center;">Wavelength Division Multiplexing (FDM)</td>
+<td>Multiple light wavelengths transmitted in a fiber.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Telephony (T1/E1 lines)</strong></td>
+<td style="text-align: center;">TDM</td>
+<td>Multiple voice calls transmitted over a single line.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>FM Radio</strong></td>
+<td style="text-align: center;">FDM</td>
+<td>Multiple stations operate at different frequency bands.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="multiple-access">Multiple Access</h4>
+<p><strong>Multiple access</strong> allows multiple users (UEs, devices) to share the available radio spectrum <mark>dynamically</mark>. Unlike multiplexing, resources are <strong>not permanently assigned</strong> but are allocated <strong>as needed</strong>.
+so despite of <strong>multiplexing</strong> ,which is about combining multiple signals into one channel <strong>before transmission</strong> and in a <strong>single point-to-point link</strong>, <strong>Multiple Access</strong> is about managing how multiple users share the spectrum <strong>during transmission</strong>.
+Types of Multiple Access are listed below.  </p>
+<ul>
+<li><strong>FDMA (Frequency Division Multiple Access):</strong> Each user gets a fixed frequency band.  </li>
+<li><strong>TDMA (Time Division Multiple Access):</strong> Each user gets a time slot dynamically.  </li>
+<li><strong>CDMA (Code Division Multiple Access):</strong> Users share the same frequency but have unique codes.  </li>
+<li><strong>OFDMA (Orthogonal Frequency Division Multiple Access):</strong> Subcarriers are dynamically shared among users (used in LTE, 5G).  </li>
+</ul>
+<p>Applications of Multiple Access are collected in the following table.  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Application</strong></th>
+<th style="text-align: center;"><strong>Multiple Access Type</strong></th>
+<th><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Mobile Networks (GSM, LTE, 5G)</strong></td>
+<td style="text-align: center;">FDMA, TDMA, OFDMA, NOMA</td>
+<td>UEs share frequency dynamically based on demand.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Wi-Fi (CSMA/CA)</strong></td>
+<td style="text-align: center;">Contention-based Access</td>
+<td>Devices compete for access to the shared spectrum. <br> It is less coordinated than others.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Satellite Communication</strong></td>
+<td style="text-align: center;">CDMA, TDMA</td>
+<td>Multiple ground stations communicate with the satellite.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="scheduling_1">Scheduling</h4>
+<p>Multiple Access (MA) methods are used in RAN, as you know. But how to manage and coordinate users? Based on what? Who has the right to access the resources right now?<br />
+These questions are answered by MAC layer but MA is done in PHY (because of spectrum, of course).<br />
+MAC scheduling is a critical function in mobile networks that dynamically allocates radio resources (e.g., Physical Resource Blocks - PRBs) to UEs based on various parameters such as <strong>QoS requirements, channel conditions, and traffic demand</strong>. The goal of scheduling is to <mark>maximize network efficiency</mark> while ensuring <mark>fairness</mark> and <mark>QoS compliance</mark>.  </p>
+<h5 id="scheduling-basics-in-4g">Scheduling Basics, in 4G</h5>
+<p>The use of OFDMA naturally leads to conceptualizing the radio spectrum as a 2-D resource, as shown below, with the subcarriers represented in the vertical dimension and the time to transmit symbols on each subcarrier represented in the horizontal dimension. The basic unit of transmission, called a <strong>Resource Element (RE)</strong>, corresponds to a <strong>15-kHz band around one subcarrier frequency</strong> and the <strong>time it takes to transmit one OFDMA symbol</strong>. The number of bits that can be encoded in each symbol depends on the modulation scheme in use. For example, using Quadrature Amplitude Modulation (QAM), 16-QAM yields 4 bits per symbol and 64-QAM yields 6 bits per symbol. The details of the modulation need not concern us here; the key point is that there is a <strong>degree of freedom to choose the modulation scheme</strong> based on the measured <strong>channel quality</strong>, sending more bits per symbol (and thus more bits per second) when the quality is high.</p>
+<p><img alt="Spectrum abstractly represented by a 2-D grid of schedulable Resource Elements." src="../images/PRB.png" title="Spectrum abstractly represented by a 2-D grid of schedulable Resource Elements." /></p>
+<p>A <strong>scheduler</strong> allocates some number of <strong>REs</strong> to each user that has data to transmit <strong>during each 1 ms Transmission Time Interval (TTI)</strong>, where users are depicted by different colored blocks in Figure above. The only constraint on the scheduler is that it must make its allocation decisions on blocks of <strong>7x12=84 resource elements</strong>, called a <strong>Physical Resource Block (PRB)</strong>. Figure shows shows two back-to-back PRBs. Of course time continues to flow along one axis, and depending on the size of the available frequency band (e.g., it might be 100 MHz wide), there may be many more subcarrier slots (and hence PRBs) available along the other axis, so the scheduler is essentially preparing and transmitting a sequence of PRBs.  </p>
+<p>Note that OFDMA is not a coding/modulation algorithm, but instead provides a <strong>framework</strong> for selecting a specific coding and modulation for each subcarrier frequency. QAM is one common example modulation. <mark>It is the scheduler’s responsibility to select the modulation to use for each PRB, based on the <strong>CQI feedback</strong> it has received.</mark> The scheduler also selects the <strong>coding</strong> on a per-PRB basis, for example, by how it sets the parameters to the turbo code algorithm.</p>
+<p>The 1-ms TTI corresponds to the time frame in which the scheduler receives feedback from users about the quality of the signal they are experiencing. <strong>This is the role of CQI: once every millisecond, each user sends a set of metrics, which the scheduler uses to make its decision as to how to allocate PRBs during the subsequent TTI</strong>.</p>
+<p>Another input to the scheduling decision is the <strong>QoS Class Identifier (QCI)</strong>, which indicates the quality-of-service each class of traffic is to receive. In 4G, the QCI value assigned to each class (there are twenty six such classes, in total) indicates whether the traffic has a <strong>Guaranteed Bit Rate (GBR)</strong> or not <strong>(non-GBR)</strong>, plus the class’s relative priority within those two categories. (Note that the 5QI parameter serves the same purpose as the QCI parameter in 4G.)</p>
+<p>Finally, keep in mind that Figure above focuses on scheduling transmissions from a single antenna, but the MIMO technology described above means the scheduler also has to determine <strong>which antenna (or more generally, what subset of antennas)</strong> will most effectively reach each receiver. But again, in the abstract, the scheduler is charged with allocating a sequence of Resource Elements.</p>
+<p>Note that the scheduler has many degrees of freedom: it has to decide <strong>which set of users to service during a given time interval</strong>, <strong>how many resource elements to allocate to each such user</strong>, <strong>how to select the coding and modulation levels</strong>, and <strong>which antenna to transmit their data on</strong>. This is an <mark><em>optimization problem</em></mark> that, fortunately, we are not trying to solve here.</p>
+<h5 id="scheduling-in-5g">Scheduling in 5G</h5>
+<p>Fundamentally, 5G defines a family of waveforms —unlike LTE, which specified only one waveform— each optimized for a different band in the radio spectrum.
+- <strong>The bands with carrier frequencies below 1 GHz</strong> are designed to deliver <strong>mobile broadband and massive IoT services with a primary focus on range</strong>.
+- <strong>Carrier frequencies between 1-6 GHz</strong> are designed to offer wider bandwidths, focusing on <strong>mobile broadband and mission-critical applications</strong>.
+- <strong>Carrier frequencies above 24 GHz (mmWaves)</strong> are designed to provide <strong>super-wide bandwidths over short, line-of-sight coverage.</strong>  </p>
+<p>These different waveforms affect the scheduling and subcarrier intervals (i.e., the <code>size</code> of the resource elements ).<br />
+- For frequency <mark>range 1 (410 MHz - 7125 MHz)</mark>, 5G allows <strong>maximum 100 MHz</strong> bandwidths. In this case, there are three waveforms with <strong>subcarrier spacings (SCS) of 15, 30 and 60 kHz</strong>. (We used 15 kHz in the example shown in Figure above.) The corresponding to scheduling intervals of <strong>0.5, 0.25, and 0.125 ms</strong>, respectively. (We used 0.5 ms in the example shown in figure above).<br />
+- For <mark>millimeter bands, also known as frequency range 2 (24.25 GHz - 52.6 GHz)</mark>, bandwidths may go from <strong>50 MHz up to 400 MHz</strong>. There are two waveforms, with subcarrier spacings of <strong>60 kHz and 120 kHz</strong>. Both have <strong>scheduling intervals of 0.125 ms</strong>.<br />
+These various configurations of <em>subcarrier spacing</em> and <em>scheduling intervals</em> are sometimes called the <strong>numerology</strong> of the radio’s air interface.  </p>
+<p>This <em>range of numerology</em> is important because it adds another degree of freedom to the scheduler. In addition to allocating radio resources to users, it has the ability to <strong>dynamically adjust the size of the resource by changing the waveform being used</strong>. With this additional freedom, <strong>fixed-sized REs are no longer the primary unit of resource allocation</strong>. We instead use more abstract terminology, and talk about allocating Resource Blocks to subscribers, where the 5G scheduler determines both the size and number of Resource Blocks allocated during each time interval.<br />
+Figure below depicts the role of the scheduler from this more abstract perspective. Just as with 4G, <strong>CQI</strong> feedback from the receivers and the <strong>5QI quality-of-service class</strong> selected by the subscriber are the two key pieces of input to the scheduler. Note that the set of 5QI values available in 5G is considerably greater than its QCI counterpart in 4G, reflecting the increasing differentiation among classes that 5G aims to support. For 5G, each class includes the following attributes:</p>
+<ul>
+<li><strong>Resource Type:</strong> Guaranteed Bit Rate (GBR), Delay-Critical GBR, Non-GBR  </li>
+<li><strong>Priority Level</strong>  </li>
+<li><strong>Packet Delay Budget</strong>  </li>
+<li><strong>Packet Error Rate</strong>  </li>
+<li><strong>Maximum Data Burst</strong>  </li>
+<li><strong>Averaging Window</strong>  </li>
+</ul>
+<p>Note that while the preceding discussion could be interpreted to imply a one-to-one relationship between subscribers and a 5QI, it is more accurate to say that <strong>each 5QI is associated with a class of traffic</strong> (often corresponding to some type of application), where <strong>a given subscriber might be sending and receiving traffic that belongs to multiple classes at any given time</strong>.<br />
+<img alt="Scheduler allocates Resource Blocks to user data streams based on CQI feedback from receivers and the 5QI parameters associated with each class of service." src="../images/scheduler.png" title="Scheduler allocates Resource Blocks to user data streams based on CQI feedback from receivers and the 5QI parameters associated with each class of service." /></p>
+<h4 id="types-of-scheduling">Types of Scheduling</h4>
+<p>So we know that mobile radio communication experiences <strong>rapid and unpredictable channel variations</strong> due to <strong>frequency-selective fading, path loss, and interference</strong>. To optimize resource utilization, techniques like <strong>channel-dependent scheduling</strong>, <strong>link adaptation</strong>, and <strong>hybrid ARQ</strong> are used.<br />
+- <strong>Channel-dependent scheduling</strong> allocates radio resources dynamically to maximize efficiency, ensuring <strong>minimum resource usage per user</strong> while <strong>meeting QoS requirements</strong>.<br />
+- <strong>Link adaptation</strong> adjusts transmission parameters (e.g., power, modulation, and coding) based on <strong>channel conditions</strong> to maintain efficient data transfer.<br />
+- <strong>Hybrid ARQ</strong> provides <strong>error correction</strong> by requesting <strong>retransmissions of corrupted data</strong>, complementing scheduling and link adaptation.  </p>
+<h5 id="link-adaptation-power-vs-rate-control">Link Adaptation: Power vs. Rate Control</h5>
+<ul>
+<li>Power Control (used in CDMA) <strong>adjusts transmit power to maintain a constant signal-to-noise ratio (SNR)</strong>, ensuring stable transmission.  </li>
+<li>Rate Control (adaptive modulation and coding, AMC) <strong>adjusts data rates instead of power, making better use of transmission power</strong>. Higher modulation schemes (e.g., 16QAM, 64QAM) are used in good conditions, while lower ones (e.g., QPSK) are used in poor conditions. The data rate should be high as possible.  </li>
+</ul>
+<p><img alt="(a) Power control (top) and (b) rate control (bottom)" src="../images/Power_Rate_control.png" title="(a) Power control (top) and (b) rate control (bottom)" /></p>
+<h5 id="channel-dependent-scheduling">Channel-Dependent Scheduling</h5>
+<p>Scheduling determines <strong>how shared radio resources are allocated among users</strong>. In downlink scheduling, transmissions can be orthogonal in time (TDM), frequency (FDM), or code (CDM). There are 3 approach:<br />
+- <strong>Max-C/I Scheduling</strong> prioritizes <strong>users with the best channel conditions</strong>, maximizing system capacity but <em>potentially starving users with poor conditions</em>.<br />
+- <strong>Round-Robin Scheduling</strong> assigns <strong>equal time to all users</strong>, ensuring fairness but reducing efficiency.<br />
+- <strong>Proportional-Fair Scheduling</strong> balances throughput and fairness by scheduling users based on both <strong>instantaneous and average channel conditions</strong>.<br />
+A practical scheduler must exploit fast channel variations for efficiency while maintaining fairness across users, often using a combination of TDM, FDM, and CDM.</p>
+<p>The first picture shows the Max-C/I Scheduling and the second one shows all three methods.<br />
+<img alt="Channel-dependent scheduling" src="../images/channel_dependent_scheduling.png" title="Channel-dependent scheduling" />
+<img alt="three different scheduling behaviors" src="../images/scheduling_types.png" title="Example of three different scheduling behaviors for two users with different average channel quality: (a) max C/I, (b) round robin, and (c) proportional fair. The selected user is shown with bold lines" /></p>
+<h4 id="references-and-further-readings">References and Further Readings</h4>
+<p>1 - <a href="https://5g.systemsapproach.org/radio.html#chapter-3-radio-transmission">Private 5G: a System Approach, Chapter 3: Radio Transmission</a><br />
+2 - <a href="https://www.youtube.com/watch?v=qOrxiRNqRRY">The Difference Between Multiplexing and Multiple Access</a><br />
+3 - <a href="https://gitlab.eurecom.fr/oai/openairinterface5g/-/blob/feature-time-manager/doc/MAC/mac-usage.md">OAI's mac-usage.md</a><br />
+4 - <a href="https://books.google.de/books/about/4G_LTE_LTE_Advanced_for_Mobile_Broadband.html?id=DLbsq9GD0zMC&amp;redir_esc=y">4G: LTE/LTE-Advanced for Mobile Broadband</a></p>
+<h2 id="architecture">Architecture</h2>
+<p>RAN Architecture and its evolution!  </p>
+<h2 id="protocol-stack">Protocol Stack</h2>
+<p>How 5G stuff works?</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2025 <a href="https://github.com/Ali78k"  target="_blank" rel="noopener">Ali Kargari</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Ali78k" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M202.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M496 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/ali_kargari" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/ali-kargari-12a6791a4" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

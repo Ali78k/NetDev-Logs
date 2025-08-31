@@ -1,0 +1,1099 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../C-CPP/">
+      
+      
+        <link rel="next" href="../RAN/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Linux - DevNet Logs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Linux - DevNet Logs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="./assets/images/social/Linux.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="None" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Linux - DevNet Logs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="./assets/images/social/Linux.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linux" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DevNet Logs" class="md-header__button md-logo" aria-label="DevNet Logs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DevNet Logs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Linux
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome to My Open RAN and 5G Documentation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../C-CPP/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  C/CPP Training
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Linux
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../RAN/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Radio Access Network
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Virtualization/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Virtualization
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DevNet Logs" class="md-nav__button md-logo" aria-label="DevNet Logs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DevNet Logs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome to My Open RAN and 5G Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C-CPP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C/CPP Training
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#up-and-running" class="md-nav__link">
+    <span class="md-ellipsis">
+      Up and Running
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Up and Running">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-a-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install a VM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-github-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a Github Repo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a Github Repo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-ssh-agent-to-connect-to-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using ssh-agent to Connect to GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using ssh-agent to Connect to GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-check-for-an-existing-ssh-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Check for an Existing SSH Key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-generate-an-ssh-key-if-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Generate an SSH Key (if needed)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-start-the-ssh-agent-and-add-the-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Start the SSH Agent and Add the Key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-add-the-ssh-key-to-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Add the SSH Key to GitHub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-test-the-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Test the Connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-set-ssh-for-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Set SSH for Git
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preparing-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing VS Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-text-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with Text Files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drive-in-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drive in Linux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Drive in Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-volume-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logical Volume Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Scenario
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firewall-in-linux-iptables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firewall in Linux: iptables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Firewall in Linux: iptables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architectural-aspects-of-iptables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architectural Aspects of iptables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iptables-syntax-and-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      iptables syntax and options:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-the-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Save The Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-and-further-readings" class="md-nav__link">
+    <span class="md-ellipsis">
+      References and Further Readings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RAN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Radio Access Network
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Virtualization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Virtualization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="linux">Linux</h1>
+<p>This page will contain Linux and its tools notes.</p>
+<h2 id="up-and-running">Up and Running</h2>
+<h3 id="install-a-vm">Install a VM</h3>
+<p>Using VBOX to install a Virtual Machine (VM) and SSHing to it is the first step.</p>
+<h3 id="create-a-github-repo">Create a Github Repo</h3>
+<p>Git as a Version Control System (VCS) is an important tool that should be utilized.</p>
+<h4 id="using-ssh-agent-to-connect-to-github">Using ssh-agent to Connect to GitHub</h4>
+<p>It's better to use ssh keys. let's do it step-by-step.  </p>
+<h5 id="1-check-for-an-existing-ssh-key">1. Check for an Existing SSH Key</h5>
+<p>First, check if you already have an SSH key:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ls<span class="w"> </span>-al<span class="w"> </span>~/.ssh
+</code></pre></div>
+<p>If you see files like <code>id_rsa</code> and <code>id_rsa.pub</code> (or <code>id_ed25519</code> and <code>id_ed25519.pub</code>), you already have an SSH key.</p>
+<h5 id="2-generate-an-ssh-key-if-needed">2. Generate an SSH Key (if needed)</h5>
+<p>If you don’t have an SSH key, generate one:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your_email@example.com&quot;</span>
+</code></pre></div>
+<p>Follow the prompts and save the key in <code>~/.ssh/id_ed25519</code> (or <code>~/.ssh/id_rsa</code>).</p>
+<h5 id="3-start-the-ssh-agent-and-add-the-key">3. Start the SSH Agent and Add the Key</h5>
+<p>Start the <code>ssh-agent</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>Add your SSH key to the agent:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ssh-add<span class="w"> </span>~/.ssh/id_ed25519
+</code></pre></div>
+<h5 id="4-add-the-ssh-key-to-github">4. Add the SSH Key to GitHub</h5>
+<p>Copy the public key to your clipboard:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>cat<span class="w"> </span>~/.ssh/id_ed25519.pub
+</code></pre></div>
+<p>Go to <a href="https://github.com/settings/keys">GitHub SSH Settings</a>, click <strong>New SSH Key</strong>, and paste the key.</p>
+<h5 id="5-test-the-connection">5. Test the Connection</h5>
+<p>Run:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ssh<span class="w"> </span>-T<span class="w"> </span>git@github.com
+</code></pre></div>
+<p>If successful, you'll see:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Hi<span class="w"> </span>username!<span class="w"> </span>You<span class="err">&#39;</span>ve<span class="w"> </span>successfully<span class="w"> </span>authenticated,<span class="w"> </span>but<span class="w"> </span>GitHub<span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>provide<span class="w"> </span>shell<span class="w"> </span>access.
+</code></pre></div>
+<h5 id="6-set-ssh-for-git">6. Set SSH for Git</h5>
+<p>Ensure Git uses SSH:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Your Name&quot;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;your_email@example.com&quot;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com:your-username/repository.git
+</code></pre></div>
+<p>Now, you can push and pull from GitHub securely using SSH! </p>
+<h3 id="preparing-vs-code">Preparing VS Code</h3>
+<p>I think it is better to use <code>vs code</code> instead of <code>vim</code>. <code>vs code</code> is a user friendly, GUI app that make it easier to deal with text files. There are also many extensions to track codes in big projects.</p>
+<h3 id="working-with-text-files">Working with Text Files</h3>
+<p>There are many powerful tools in linux that can be used in editing or displaying text files. <code>cat</code>, <code>tr</code>, <code>awk</code>, <code>cut</code>, <code>sort</code> and <code>uniq</code> are the most useful ones.</p>
+<h2 id="drive-in-linux">Drive in Linux</h2>
+<h3 id="introduction">Introduction</h3>
+<p>Drives are known as physical disks used to permanently store data into them. The first step towards organizing the storage on a disk is <code>Disk Partitioning</code>. It involves dividing a disk into separate sections, each functioning as an independent disk, which can be managed separately. This segregation helps in managing files, running different operating systems on the same disk, or creating a dedicated space for specific data.<br />
+There are three types of partitions:<br />
+<strong>1. Primary Partitions:</strong> Directly accessible and used for booting the system. A disk can have up to four primary partitions.<br />
+<strong>2 Extended Partitions:</strong> Created within a primary partition, acting as a container that can hold multiple logical partitions. This is a workaround for the four-partition limit.<br />
+<strong>3. Logical Partitions:</strong> Nested within an extended partition, allowing for more than four partitions on a disk.<br />
+A partition table tells the operating system how the partitions and data on the drive are organized. Master Boot Record (MBR) and GUID Partition Table (GPT) are two types of partition tables. MBR is a bit of reserved space at the beginning of the drive that contains the information about how the partitions are organized. The MBR also contains code to launch the operating system, and it's sometimes called the Boot Loader. GPT is a newer standard that's slowly replacing MBR. Unlike an MBR partition table, GPT stores the data about how all the partitions are organized and how to boot the OS throughout the drive.  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Partiotion Table</th>
+<th style="text-align: center;"># of Primary Partitions</th>
+<th style="text-align: center;">Max. of Disk Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">MBR</td>
+<td style="text-align: center;">Up to 4</td>
+<td style="text-align: center;">Up to 2 TB</td>
+</tr>
+<tr>
+<td style="text-align: center;">GPT</td>
+<td style="text-align: center;">Up to 128</td>
+<td style="text-align: center;">Up to 1 bilion TB</td>
+</tr>
+</tbody>
+</table>
+<p>A <strong>file system</strong> dictates how data is stored and retrieved. <mark>Each partition can use a different file system</mark> (<code>ext4</code>, <code>NTFS</code>, <code>FAT32</code>, etc.), affecting performance, storage efficiency, and compatibility. 
+As a general rule, <code>ext4</code> is better suited for handling a large number of small files, while <code>xfs</code> performs better when dealing with a smaller number of large files.<br />
+Linux offers a plethora of tools for disk partitioning, including:<br />
+<strong>1. fdisk:</strong> A command-line utility ideal for MBR disks.
+<strong>2. gdisk:</strong> Similar to fdisk but for GPT disks.
+<strong>3. parted:</strong> A versatile tool that supports both MBR and GPT disks.</p>
+<h3 id="logical-volume-management">Logical Volume Management</h3>
+<h3 id="linux-commands">Linux Commands</h3>
+<h4 id="example-scenario">Example Scenario</h4>
+<h2 id="firewall-in-linux-iptables">Firewall in Linux: <code>iptables</code></h2>
+<p>The Linux kernel comes with a packet filtering framework named <code>netfilter</code>. It allows you to allow, drop and modify traffic leaving in and out of a system. A tool, <code>iptables</code> builds upon this functionality to provide a powerful firewall, which you can configure by adding rules. In addition, other programs such as <code>fail2ban</code> also use iptables to block attackers.<br />
+Iptables relies on a set of <code>rules</code> organized into <code>chains</code> that determine the fate of incoming packets. It checks each packet against these rules to decide whether to <strong>allow</strong> it, <strong>drop</strong> it, or <strong>forward</strong> it to another <code>chain</code>. With iptables, you have full control over the network flow, allowing you to <strong>filter</strong>, <strong>block</strong>, or <strong>shape</strong> traffic as needed.  </p>
+<h3 id="architectural-aspects-of-iptables">Architectural Aspects of <code>iptables</code></h3>
+<p><code>iptables</code> rules was designed in a hierarchical architecture. There are 3 units: <em>table</em>, <em>chain</em> and, <em>rule</em>.
+<img alt="iptables Architecture" src="../images/iptables.webp" title="iptables Architecture" />
+<strong>Table:</strong> The traffic packets are filtered based on <strong>tables</strong> that are managed by <code>iptables</code>.<br />
+Most Linux distributions have four tables: <code>filter</code>, <code>mangle</code>, <code>nat</code>, and <code>raw</code>. The default is <code>filter</code>.<br />
+<strong>Chain:</strong> Each table contains a set of rulers (or chains) that define what to do with each packet depending on its point (<em>input</em>, <em>output</em>, <em>forward</em>). So each table contains a few chains, such as <code>PREROUTING</code>, <code>INPUT</code>, <code>OUTPUT</code>, <code>FORWARD</code>, and <code>POSTROUTING</code>. The filter table by default contains the <code>INPUT</code>, <code>FORWARD</code>, and <code>OUTPUT</code> chains.<br />
+<strong>Rules:</strong>  Each chain can contain rules to match specific packets based on type of traffic (e.g. tcp/udp/icmp), destination or source IP, port, etc. Each rule contains a target which determines what to do with packets that match the rule (e.g. accept or reject).<br />
+<strong>Target:</strong> Each rule contains a target which determines what to do with packets that match the rule (e.g. accept or reject). The available targets are <code>ACCEPT</code>, <code>DROP</code>, and <code>REJECT</code>. The difference between <code>DROP</code> and <code>REJECT</code>, is that with <code>REJECT</code>, a <strong><em>connection reset</em></strong> for <code>TCP</code> and a <strong><em>destination host unreachable</em></strong> for <code>UDP/ICMP</code> is sent to the packet source, while <code>DROP</code> dictates that nothing is to be sent to the packet source.</p>
+<hr />
+<p>For example, a rule in the OUTPUT chain may match to <mark>UDP packets that go out to port 53</mark>, and the target may say that those packets should be dropped. </p>
+<h3 id="basic-commands">Basic Commands</h3>
+<p><code>iptables</code> can be installed by:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>iptables
+</code></pre></div>
+Some basic commands are listed bellow:
+<code>iptables -L</code>: View current rules.
+<code>iptables -A</code>: Append a new rule to a chain.
+<code>iptables -D</code>: Delete a rule from a chain.
+<code>iptables -P</code>: Set default policy for a chain.
+<code>iptables -F</code>: Flush all rules in a chain.</p>
+<h3 id="iptables-syntax-and-options"><code>iptables</code> syntax and options:</h3>
+<p>An iptables command looks as follows:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>iptables<span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span><span class="o">[</span>chain<span class="o">]</span><span class="w"> </span><span class="o">[</span>criteria<span class="o">]</span><span class="w"> </span>-j<span class="w"> </span><span class="o">[</span>target<span class="o">]</span>
+</code></pre></div>
+The table below contains common iptables options:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Option</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">-A  <br>  --append</td>
+<td style="text-align: left;">append a rule to a chain.</td>
+</tr>
+<tr>
+<td style="text-align: center;">-C <br> --check</td>
+<td style="text-align: left;">Look for a rule that matches a chain.</td>
+</tr>
+<tr>
+<td style="text-align: center;">-D <br> --delete</td>
+<td style="text-align: left;">Remove a rule from a chain.</td>
+</tr>
+<tr>
+<td style="text-align: center;">-F <br> --flush</td>
+<td style="text-align: left;">Remove all rules.</td>
+</tr>
+<tr>
+<td style="text-align: center;">-I <br> --insert</td>
+<td style="text-align: left;">Add a rule to a chain at the provided</td>
+</tr>
+<tr>
+<td style="text-align: center;">-L <br> --list</td>
+<td style="text-align: left;">Show all rules in a chain.</td>
+</tr>
+<tr>
+<td style="text-align: center;">-N <br> --new-chain</td>
+<td style="text-align: left;">Create a new chain.</td>
+</tr>
+<tr>
+<td style="text-align: center;">-V <br> --verbose</td>
+<td style="text-align: left;">Show a more detailed output.</td>
+</tr>
+<tr>
+<td style="text-align: center;">-X <br> --delete-chain</td>
+<td style="text-align: left;">Delete a chain.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<ul>
+<li>Allow HTTPS Traffic
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">443</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+</code></pre></div></li>
+<li>
+<p>Reject SSH Traffic
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">22</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+</code></pre></div></p>
+</li>
+<li>
+<p>Reject traffic from an IP address range
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-m<span class="w"> </span>iprange<span class="w"> </span>--src-range<span class="w"> </span><span class="o">[</span>IP-address-range<span class="o">]</span><span class="w"> </span>-j<span class="w"> </span>REJECT
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="c1"># for example</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-m<span class="w"> </span>iprange<span class="w"> </span>--src-range<span class="w"> </span><span class="m">192</span>.168.1.100-192.168.1.200<span class="w"> </span>-j<span class="w"> </span>REJECT
+</code></pre></div></p>
+</li>
+<li>Enable IP Masquerading for Internet Access</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>sudo<span class="w"> </span>iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>POSTROUTING<span class="w"> </span>-o<span class="w"> </span>&lt;IFNAME&gt;<span class="w"> </span>-j<span class="w"> </span>MASQUERADE
+</code></pre></div>
+The provided command is used to enable IP Masquerading, which is a form of network address translation (NAT) that allows devices on a private network to communicate with the internet using the public IP address of the gateway. This is commonly used in scenarios where you have a private network (e.g., a home or office network) and want to allow devices on that network to access the internet.</p>
+<ul>
+<li>Delete a specific rule
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># list all rules:</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>sudo<span class="w"> </span>iptables<span class="w"> </span>-L<span class="w"> </span>--line-numbers
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="c1">#Locate the line number of the firewall rule you want to delete:</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1">#Replace [number] with the rule line number you want to remove in the command bellow</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>sudo<span class="w"> </span>iptables<span class="w"> </span>-D<span class="w"> </span>INPUT<span class="w"> </span><span class="o">[</span>number<span class="o">]</span>
+</code></pre></div></li>
+</ul>
+<h3 id="save-the-rules">Save The Rules</h3>
+<p><code>iptables</code> doesn't save the rules - These are available aslong as the machine is up. To keep <code>iptables</code> firewall rules after reboot, install the persistent package:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>iptables-persistent
+</code></pre></div>
+Enable the service
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>iptables
+</code></pre></div>
+Save them
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>sudo<span class="w"> </span>netfilter-persistent<span class="w"> </span>save
+</code></pre></div></p>
+<h3 id="references-and-further-readings">References and Further Readings</h3>
+<p>1 - <a href="https://phoenixnap.com/kb/iptables-linux">iptables Tutorial: A Beginner's Guide to the Linux Firewall</a><br />
+2 - <a href="https://medium.com/skilluped/what-is-iptables-and-how-to-use-it-781818422e52">What Is iptables and How to Use It?</a><br />
+3 - <a href="https://www.booleanworld.com/depth-guide-iptables-linux-firewall/">An In-Depth Guide to iptables, the Linux Firewall</a><br />
+4 - <a href="https://netbeez.net/blog/linux-iptables/">Linux for Network Engineers: iptables</a><br />
+5 - <a href="https://medium.com/itversity/secure-your-network-mastering-iptables-command-0abd45ff7e9c">Secure Your Network with iptables</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2025 <a href="https://github.com/Ali78k"  target="_blank" rel="noopener">Ali Kargari</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Ali78k" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M202.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M496 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/ali_kargari" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/ali-kargari-12a6791a4" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
