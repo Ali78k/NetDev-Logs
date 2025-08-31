@@ -129,10 +129,10 @@ _Proxmox First Login on the Web UI_
 #### Post-install housekeeping (no subscription repo)
 By default, Proxmox points to the enterprise repo (requires a subscription). Switch to the free repo:  
 Open Shell in the Web UI (top-right) or SSH to the node, then:  
- - Disable the enterprise repo:
+ - Disable the enterprise repo:  
 
  Go to Web UI, from the left panel, choose node (here `pve`) -> Updates -> Repositories. Select `pve-enterprise-sources` and `ceph-sources`, and disable them.  
- - Enable the no-subscription repo (Proxmox VE 8.x on Debian 13 `trixie`):
+ - Enable the no-subscription repo (Proxmox VE 8.x on Debian 13 `trixie`):  
 
  Open a shell, `editor /etc/apt/sources.lists.d/pve-no-subscription` and paste following content:  
  ```
