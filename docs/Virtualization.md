@@ -131,15 +131,15 @@ By default, Proxmox points to the enterprise repo (requires a subscription). Swi
 Open Shell in the Web UI (top-right) or SSH to the node, then:  
  - Disable the enterprise repo:  
 
- Go to Web UI, from the left panel, choose node (here `pve`) -> Updates -> Repositories. Select `pve-enterprise-sources` and `ceph-sources`, and disable them.  
+Go to Web UI, from the left panel, choose node (here `pve`) -> Updates -> Repositories. Select `pve-enterprise-sources` and `ceph-sources`, and disable them.  
  - Enable the no-subscription repo (Proxmox VE 8.x on Debian 13 `trixie`):  
 
- Open a shell, `editor /etc/apt/sources.lists.d/pve-no-subscription` and paste following content:  
- ```
+Open a shell, `editor /etc/apt/sources.lists.d/pve-no-subscription` and paste following content:  
+```
 deb http://download.proxmox.com/debian/pve trixie pve-no-subscription
- ```
+```
 Now, You can update and upgrade the OS:  
- ```
+```
 apt update
 apt full-upgrade -y
 reboot
